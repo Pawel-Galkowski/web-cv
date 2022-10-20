@@ -1,5 +1,6 @@
-import { AppStyles } from './styles';
-import { BlankCard, Navigation } from '..';
+import { AppStyles } from "./styles";
+import { BlankCard, Navigation } from "..";
+import 'antd/dist/antd.css';
 
 const MainPage = () => (
   <div style={AppStyles}>
@@ -9,3 +10,5 @@ const MainPage = () => (
 );
 
 export default MainPage;
+
+2

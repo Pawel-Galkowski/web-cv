@@ -1,7 +1,9 @@
-export const AppStyles = {
-  width: '100vh',
-  height: '100vw',
+import { CSSProperties } from "react";
+
+export const AppStyles: CSSProperties = {
   margin: 0,
+  gap: '16px',
   padding: 0,
-  overflow: 'hidden',
+  display: 'flex',
+  flexDirection: 'row',
 }
