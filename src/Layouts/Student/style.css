@@ -1,9 +1,9 @@
-.body {
+.body{
     background-color: #94D9EA;
     max-width: 80%;
 }
 
-.main-content {
+.main-content{
     min-height: 100vh;
     width: 80%;
     margin: 2rem auto;
@@ -11,100 +11,56 @@
     grid-template-columns: repeat(7, 1fr);
 }
 
-.left-section {
-    grid-column: span 5;
-    background-color: #f7f7f7
-}
-
-.right-section {
+.left-section{
     grid-column: span 2;
-    background-color: red;
-}
-
-.about {
-    grid-column: span 7;
+    height: 100%;
     background-color: #00324A;
-    display: grid;
-    padding: 24px;
-    grid-template-columns: repeat(7, 1fr);
 }
-
-.contact-info {
-    grid-column: span 7;
-    background-color: slategray;
-    display: grid;
-    padding: 24px;
-    grid-template-columns: repeat(2, auto);
-    color: white;
-}
-
-.contact-info ul {
-    list-style-type: none;
-}
-
-.contact-info a {
-    color: white;
-}
-
-.profile {
+.right-section{
     grid-column: span 5;
+    background-color: #f7f7f7;
+    height: 100%;
 }
 
-.image {
-    grid-column: span 2;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.image img {
-    width: 80%;
-    border-radius: 50%;
-    border: 8px solid #002333;
-    margin: 0 auto;
-}
-
-.experience {
-    margin-bottom: 3rem;
-}
-
-.exp-details {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.para {
-    line-height: 1.6rem;
-    color: #718096;
-    font-size: 1rem;
-}
-
-.left-content {
+.left-content{
     padding: 2rem 3rem;
 }
-
-.name {
-    font-size: 2rem;
-    color: white;
-    text-align: left;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 1.2rem 0 0;
-    margin-bottom: 0;
+.profile{
+    width: 100%;
+    border-bottom: 1px solid #002333;
 }
 
-.career {
+.image{
+    width: 100%;
+    text-align: center;
+}
+.profile img{
+    width: 100%;
+    border-radius: 50%;
+    border: 8px solid #002333;
+    
+}
+
+.name{
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.2rem 0;
+}
+
+.career{
     font-size: 1.2rem;
     color: #94D9EA;
-    text-align: left;
+    text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
     padding-bottom: 1rem;
 }
 
-.main-title {
+.main-title{
     font-size: 1.8rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -112,92 +68,99 @@
     padding-top: 3rem;
 }
 
-.skills-section ul {
+.contact-info ul{
     padding-top: 2rem;
 }
 
-.skills-section ul li {
+.contact-info ul li{
+    padding: .4rem 0;
+    display: flex;
+    align-items: center;
+    color: #718096;
+}
+.contact-info ul li i{
+    padding-right: 1rem;
+    font-size: 1.2rem;
+    color: #2D9CDB;
+}
+
+.skills-section ul{
+    padding-top: 2rem;
+}
+.skills-section ul li{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: .4rem 0;
 }
 
-.progress-bar {
+.progress-bar{
     width: 100%;
     height: .4rem;
     background-color: #2f81ed5b;
     position: relative;
     border-radius: 12px;
 }
-
-.progress {
+.progress{
     height: 100%;
     position: absolute;
     left: 0;
     background-color: #2D9CDB;
     border-radius: 12px;
 }
-
-.js-progress {
+.js-progress{
     width: 70%;
 }
-
-.ps-progress {
+.ps-progress{
     width: 90%;
 }
-
-.j-progress {
+.j-progress{
     width: 85%;
 }
-
-.c-progress {
+.c-progress{
     width: 40%;
 }
-
-.n-progress {
+.n-progress{
     width: 63%;
 }
-
-.w-progress {
+.w-progress{
     width: 78%;
 }
 
 
-.skill-title {
+.skill-title{
     text-transform: uppercase;
     color: #f7f7f7;
     font-size: 1rem;
 }
 
-.sub-title {
+.sub-title{
     padding-top: 2rem;
     font-size: 1.2rem;
     text-transform: uppercase;
     color: #f7f7f7;
 }
 
-.sub-para {
+.sub-para{
     color: #ccc;
     padding: .4rem 0;
 }
 
-.references-section li {
+.references-section li{
     color: #ccc;
     padding: .2rem 0;
 }
-
-.references-section li i {
+.references-section li i{
     padding-right: .5rem;
     font-size: 1.2rem;
     color: #2D9CDB;
 }
 
-.right-main-content {
+.right-main-content{
     padding: 2rem 3rem;
 }
 
 
-.right-title {
+.right-title{
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #2F80ED;
@@ -205,7 +168,7 @@
     position: relative;
 }
 
-.right-title::after {
+.right-title::after{
     content: "";
     position: absolute;
     width: 60%;
@@ -217,34 +180,42 @@
     transform: translateY(-50%);
 }
 
-.sect {
+.para{
+    line-height: 1.6rem;
+    color: #718096;
+    font-size: 1.1rem;
+}
+
+.sect{
     padding-bottom: 2rem;
 }
 
-.tl-title {
-    letter-spacing: 1px;
-    font-size: 1rem;
-    color: #002333;
-    text-transform: uppercase;
-    margin-bottom: 0;
+.timeline{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
-.tl-title-2 {
+.tl-title{
+    letter-spacing: 1px;
+    font-size: 1.3rem;
+    color: #002333;
+    text-transform: uppercase;
+}
+.tl-title-2{
     letter-spacing: 1px;
     font-size: 1.3rem;
     color: #2D9CDB;
     text-transform: uppercase;
-    margin-bottom: 0;
 }
 
-.tl-content {
+.tl-content{
     border-left: 1px solid #ccc;
     padding-left: 2rem;
     position: relative;
     padding-bottom: 2rem;
 }
 
-.tl-title-2::before {
+.tl-title-2::before{
     content: "";
     position: absolute;
     width: .7rem;
@@ -256,52 +227,44 @@
 }
 
 /*Media Querries*/
-@media screen and (max-width:823px) {
-    .right-title::after {
+@media screen and (max-width:823px){
+    .right-title::after{
         width: 40%;
     }
 }
-
-@media screen and (max-width:681px) {
-    .right-title::after {
+@media screen and (max-width:681px){
+    .right-title::after{
         width: 30%;
     }
 }
-
-@media screen and (max-width:780px) {
-    .timeline {
+@media screen and (max-width:780px){
+    .timeline{
         grid-template-columns: repeat(1, 1fr);
     }
 }
-
-@media screen and (max-width:780px) {
-    .left-section {
+@media screen and (max-width:780px){
+    .left-section{
         grid-column: span 3;
     }
-
-    .right-section {
+    .right-section{
         grid-column: span 4;
     }
 }
-
-@media screen and (max-width:1200px) {
-    .main-content {
+@media screen and (max-width:1200px){
+    .main-content{
         grid-template-columns: repeat(1, 1fr);
     }
-
-    .profile img {
+    .profile img{
         width: 40%;
     }
 }
-
-@media screen and (max-width:700px) {
-    .profile img {
+@media screen and (max-width:700px){
+    .profile img{
         width: 60%;
     }
 }
-
-@media screen and (max-width:390px) {
-    .name {
+@media screen and (max-width:390px){
+    .name{
         font-size: 1.5rem;
     }
 }
