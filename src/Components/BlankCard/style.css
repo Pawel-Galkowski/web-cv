@@ -8,21 +8,21 @@
     width: 80%;
     margin: 2rem auto;
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(12, 1fr);
 }
 
 .left-section {
-    grid-column: span 5;
+    grid-column: span 8;
     background-color: #f7f7f7
 }
 
 .right-section {
-    grid-column: span 2;
+    grid-column: span 4;
     background-color: red;
 }
 
 .about {
-    grid-column: span 7;
+    grid-column: span 12;
     background-color: #00324A;
     display: grid;
     padding: 24px;
@@ -30,16 +30,19 @@
 }
 
 .contact-info {
-    grid-column: span 7;
+    grid-column: span 12;
     background-color: slategray;
     display: grid;
-    padding: 24px;
+    padding: 12px 24px; 
     grid-template-columns: repeat(2, auto);
     color: white;
 }
 
-.contact-info ul {
-    list-style-type: none;
+.contact-info > * {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
 }
 
 .contact-info a {
@@ -121,47 +124,6 @@
     grid-template-columns: repeat(2, 1fr);
     padding: .4rem 0;
 }
-
-.progress-bar {
-    width: 100%;
-    height: .4rem;
-    background-color: #2f81ed5b;
-    position: relative;
-    border-radius: 12px;
-}
-
-.progress {
-    height: 100%;
-    position: absolute;
-    left: 0;
-    background-color: #2D9CDB;
-    border-radius: 12px;
-}
-
-.js-progress {
-    width: 70%;
-}
-
-.ps-progress {
-    width: 90%;
-}
-
-.j-progress {
-    width: 85%;
-}
-
-.c-progress {
-    width: 40%;
-}
-
-.n-progress {
-    width: 63%;
-}
-
-.w-progress {
-    width: 78%;
-}
-
 
 .skill-title {
     text-transform: uppercase;
