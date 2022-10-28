@@ -1,0 +1,19 @@
+.container {
+    margin: 12px 0;
+}
+
+.exp-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ant-typography + h5.ant-typography {
+    margin-top: 0;
+    color: white;
+}
+
+.ant-typography + h4.ant-typography {
+    margin-top: 0;
+    color: white;
+}

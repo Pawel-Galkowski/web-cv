@@ -1,10 +1,10 @@
 import { Typography, Tag } from "antd";
-import "./styles.css";
+import { SkillsStyles } from "./styles";
 
 const { Title } = Typography;
 
 export const Skills: React.FC = (): JSX.Element => (
-  <>
+  <div style={SkillsStyles}>
     <Title level={3}>Skills</Title>
     <Tag>Javascript</Tag>
     <Tag>TypeScript</Tag>
@@ -20,5 +20,5 @@ export const Skills: React.FC = (): JSX.Element => (
     <Tag>Jira/Confluence/Postman</Tag>
     <Tag>JQuery</Tag>
     <Tag>Storybook</Tag>
-  </>
+  </div>
 );

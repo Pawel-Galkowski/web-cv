@@ -21,63 +21,6 @@
     background-color: red;
 }
 
-.about {
-    grid-column: span 12;
-    background-color: #00324A;
-    display: grid;
-    padding: 24px;
-    grid-template-columns: repeat(7, 1fr);
-}
-
-.contact-info {
-    grid-column: span 12;
-    background-color: slategray;
-    display: grid;
-    padding: 12px 24px; 
-    grid-template-columns: repeat(2, auto);
-    color: white;
-}
-
-.contact-info > * {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-}
-
-.contact-info a {
-    color: white;
-}
-
-.profile {
-    grid-column: span 5;
-}
-
-.image {
-    grid-column: span 2;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.image img {
-    width: 80%;
-    border-radius: 50%;
-    border: 8px solid #002333;
-    margin: 0 auto;
-}
-
-.experience {
-    margin-bottom: 3rem;
-}
-
-.exp-details {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
 .para {
     line-height: 1.6rem;
     color: #718096;
@@ -86,25 +29,6 @@
 
 .left-content {
     padding: 2rem 3rem;
-}
-
-.name {
-    font-size: 2rem;
-    color: white;
-    text-align: left;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 1.2rem 0 0;
-    margin-bottom: 0;
-}
-
-.career {
-    font-size: 1.2rem;
-    color: #94D9EA;
-    text-align: left;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding-bottom: 1rem;
 }
 
 .main-title {
@@ -158,27 +82,6 @@
     padding: 2rem 3rem;
 }
 
-
-.right-title {
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #2F80ED;
-    margin-bottom: 1.2rem;
-    position: relative;
-}
-
-.right-title::after {
-    content: "";
-    position: absolute;
-    width: 60%;
-    height: .2rem;
-    background-color: #ccc;
-    border-radius: 12px;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
 .sect {
     padding-bottom: 2rem;
 }
@@ -217,19 +120,6 @@
     left: 0;
 }
 
-/*Media Querries*/
-@media screen and (max-width:823px) {
-    .right-title::after {
-        width: 40%;
-    }
-}
-
-@media screen and (max-width:681px) {
-    .right-title::after {
-        width: 30%;
-    }
-}
-
 @media screen and (max-width:780px) {
     .timeline {
         grid-template-columns: repeat(1, 1fr);
@@ -249,21 +139,5 @@
 @media screen and (max-width:1200px) {
     .main-content {
         grid-template-columns: repeat(1, 1fr);
-    }
-
-    .profile img {
-        width: 40%;
-    }
-}
-
-@media screen and (max-width:700px) {
-    .profile img {
-        width: 60%;
-    }
-}
-
-@media screen and (max-width:390px) {
-    .name {
-        font-size: 1.5rem;
     }
 }

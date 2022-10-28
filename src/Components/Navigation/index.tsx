@@ -1,19 +1,19 @@
-import { FC, useCallback } from "react";
-import { Collapse } from "antd";
+import { FC, useCallback } from "react"
+import { Collapse } from "antd"
 
-const { Panel } = Collapse;
+const { Panel } = Collapse
 
 const text = `
   A dog is a type of domesticated animal.
   Known for its loyalty and faithfulness,
   it can be found as a welcome guest in many households across the world.
-`;
+`
 
 const Navigation: FC = () => {
   const onChange = useCallback((key: string | string[]) => {
     // eslint-disable-next-line no-console
-    console.log(key);
-  }, []);
+    console.log(key)
+  }, [])
   return (
     <div style={{ width: '350px' }}>
         asdasdasd

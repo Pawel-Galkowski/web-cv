@@ -1,9 +1,29 @@
+import { List, Typography } from "antd";
+
+const { Title } = Typography;
+
+const SkillsData = [
+  {
+    title: "Polish",
+    description: "Native or Bilingual Proficiency",
+  },
+  {
+    title: "English",
+    description: "Full Professional Proficiency",
+  },
+];
+
 export const Languages: React.FC = (): JSX.Element => (
-  <div className="skills-section">
-    <h3 className="main-title">Languages</h3>
-    <ul>
-      <li className="skill-title">Polish</li>
-      <li className="skill-title">English</li>
-    </ul>
+  <div className="container">
+    <Title level={3}>Languages</Title>
+    <List
+      itemLayout="horizontal"
+      dataSource={SkillsData}
+      renderItem={(item) => (
+        <List.Item>
+          <List.Item.Meta title={item.title} description={item.description} />
+        </List.Item>
+      )}
+    />
   </div>
 );

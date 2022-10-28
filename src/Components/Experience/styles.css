@@ -1,0 +1,39 @@
+.right-title {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: blue;
+    margin-bottom: 1.2rem;
+    position: relative;
+}
+
+.right-title::after {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: .2rem;
+    background-color: #ccc;
+    border-radius: 12px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width:823px) {
+    .right-title::after {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:681px) {
+    .right-title::after {
+        width: 30%;
+    }
+}
+
+.ant-typography ul li, .ant-typography ol li{
+    margin: 0;
+}
+
+.experience {
+    margin-bottom: 3rem;
+}
