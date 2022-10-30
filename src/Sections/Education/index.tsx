@@ -1,5 +1,5 @@
 import { Typography } from 'antd'
-import { SectionTitle } from '../SectionTitle'
+import { SectionTitle } from '../../Components/SectionTitle'
 import { educationStyles, detailsStyles, titleStyles, schoolStyles } from './styles'
 
 const { Title, Paragraph } = Typography

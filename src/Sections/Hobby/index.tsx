@@ -1,6 +1,6 @@
 import { PlayCircleFilled, RocketFilled } from '@ant-design/icons'
 import { List } from 'antd'
-import { SectionTitle } from '../SectionTitle'
+import { SectionTitle } from '../../Components/SectionTitle'
 
 const SkillsData = [
 	{

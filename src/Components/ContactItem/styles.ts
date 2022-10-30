@@ -6,3 +6,9 @@ export const contactItemStyles: CSSProperties = {
     gap: '8px',
     alignItems: 'center'
 }
+
+export const linkStyles: CSSProperties = {
+    color: 'white',
+    fontWeight: 'bold',
+    textDecoration: 'none',
+}

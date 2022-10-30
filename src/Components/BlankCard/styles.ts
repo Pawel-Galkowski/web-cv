@@ -22,7 +22,7 @@ export const firstSectionStyles = {
 
 export const secondSectionStyles = {
 	gridColumn: "span 4",
-	backgroundColor: "red",
+	backgroundColor: "#f7f7f7",
 }
 
 export const mainContentPadding = {

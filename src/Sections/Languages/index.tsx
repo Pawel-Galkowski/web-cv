@@ -1,5 +1,5 @@
 import { List } from 'antd'
-import { SectionTitle } from '../SectionTitle'
+import { SectionTitle } from '../../Components/SectionTitle'
 
 const SkillsData = [
 	{

@@ -5,7 +5,7 @@ import { ExperiencedType } from './types'
 
 const { Title, Paragraph } = Typography
 
-export const Experience: React.FC<ExperiencedType> = ({
+const Experience: React.FC<ExperiencedType> = ({
 	title,
 	company,
 	data,
@@ -40,3 +40,5 @@ export const Experience: React.FC<ExperiencedType> = ({
 		/>
 	</article>
 )
+
+export default Experience

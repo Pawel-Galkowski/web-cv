@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { SectionTitle } from '../SectionTitle'
+import { SectionTitle } from '../../Components/SectionTitle'
 import { StyledTag } from './styles'
 
 interface CustomTag {

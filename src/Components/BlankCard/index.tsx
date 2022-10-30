@@ -15,7 +15,7 @@ import {
 	Hobby,
 	Languages,
 	Skills,
-} from '../'
+} from '../../Sections'
 
 const BlankCard: React.FC = (): JSX.Element => (
 	<Row style={blankCardStyles}>

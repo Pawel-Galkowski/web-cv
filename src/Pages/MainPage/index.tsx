@@ -1,5 +1,5 @@
 import { AppStyles } from "./styles";
-import { BlankCard, Navigation } from "..";
+import { BlankCard, Navigation } from "../../Components";
 import 'antd/dist/antd.css';
 
 const MainPage: React.FC = () => (

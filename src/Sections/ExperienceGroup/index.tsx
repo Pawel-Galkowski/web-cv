@@ -1,6 +1,6 @@
-import { Experience } from '..'
+import { Experience } from '../../Components'
 import { CapgeminiData, INGData, IKData, HospitalData } from './data'
-import { SectionTitle } from '../SectionTitle'
+import { SectionTitle } from '../../Components/SectionTitle'
 
 export const ExperienceGroup: React.FC = () => (
 	<section>
