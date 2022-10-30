@@ -1,7 +1,6 @@
 import { PlayCircleFilled, RocketFilled } from '@ant-design/icons'
-import { List, Typography } from 'antd'
-
-const { Title } = Typography
+import { List } from 'antd'
+import { SectionTitle } from '../SectionTitle'
 
 const SkillsData = [
 	{
@@ -21,7 +20,7 @@ const SkillsData = [
 
 export const Hobby: React.FC = (): JSX.Element => (
 	<div className='container'>
-		<Title level={3}>Interests</Title>
+		<SectionTitle title='Interests' />
 		<List
 			itemLayout='horizontal'
 			dataSource={SkillsData}

@@ -1,5 +1,6 @@
 import { FC } from 'react'
-import { StyledTitle, StyledTag } from './styles'
+import { SectionTitle } from '../SectionTitle'
+import { StyledTag } from './styles'
 
 interface CustomTag {
 	title: string
@@ -11,7 +12,7 @@ const CustomTag: FC<CustomTag> = ({ title }): JSX.Element => (
 
 export const Skills: FC = (): JSX.Element => (
 	<>
-		<StyledTitle level={3}>Skills</StyledTitle>
+		<SectionTitle title='Skills' />
 		<CustomTag title='Javascript' />
 		<CustomTag title='TypeScript' />
 		<CustomTag title='Angular' />

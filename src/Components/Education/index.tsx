@@ -1,11 +1,12 @@
 import { Typography } from 'antd'
+import { SectionTitle } from '../SectionTitle'
 import { educationStyles, detailsStyles, titleStyles, schoolStyles } from './styles'
 
 const { Title, Paragraph } = Typography
 
 export const Education: React.FC = (): JSX.Element => (
 	<div style={educationStyles}>
-		<Title level={3}>Education</Title>
+		<SectionTitle title='Education' />
 		<Title level={5} style={titleStyles}>
 			BTech in Computer Science
 		</Title>
