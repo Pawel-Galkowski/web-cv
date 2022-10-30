@@ -1,5 +1,4 @@
 import { Typography, Tag } from 'antd'
-import { CSSProperties } from 'react'
 import styled from 'styled-components'
 
 export const StyledTag = styled(Tag)`
@@ -12,14 +11,5 @@ export const StyledTag = styled(Tag)`
 `
 
 export const StyledTitle = styled(Typography.Title)`
-	color: white;
+	color: white !important;
 `
-
-export const tagStyles: CSSProperties = {
-	margin: '4px',
-	backgroundColor: 'blue',
-	color: 'white',
-	border: 'blue',
-	borderRadius: '5px',
-	textTransform: 'capitalize',
-}

@@ -1,31 +1,30 @@
-import { Tag } from 'antd'
 import { FC } from 'react'
-import { StyledTitle, StyledTag, tagStyles } from './styles'
+import { StyledTitle, StyledTag } from './styles'
 
 interface CustomTag {
-	children: string
+	title: string
 }
 
-const CustomTag: React.FC<CustomTag> = ({ children }): JSX.Element => (
-	<StyledTag>{children}</StyledTag>
+const CustomTag: FC<CustomTag> = ({ title }): JSX.Element => (
+	<StyledTag>{title}</StyledTag>
 )
 
 export const Skills: FC = (): JSX.Element => (
-	<div>
-		<StyledTitle level={3}>Skills</StyledTitle>
-		<CustomTag>Javascript</CustomTag>
-		<CustomTag>TypeScript</CustomTag>
-		<Tag>Angular</Tag>
-		<StyledTag>HTML/Bootstrap/Grid/Flex</StyledTag>
-		<StyledTag>Ajax</StyledTag>
-		<StyledTag>CSS/SCSS/LESS</StyledTag>
-		<StyledTag>REACT/REDUX</StyledTag>
-		<StyledTag>Node/Express</StyledTag>
-		<StyledTag>GIT/Github/AWS</StyledTag>
-		<StyledTag>MongoDB</StyledTag>
-		<StyledTag>Mocha/Jest/Jasmin</StyledTag>
-		<StyledTag>Jira/Confluence/Postman</StyledTag>
-		<StyledTag>JQuery</StyledTag>
-		<StyledTag>Storybook</StyledTag>
-	</div>
-)
+	<>
+    <StyledTitle level={3}>Skills</StyledTitle>
+    <CustomTag title="Javascript"/>
+    <CustomTag title="TypeScript"/>
+    <CustomTag title="Angular"/>
+    <CustomTag title="HTML/Bootstrap/Grid/Flex"/>
+    <CustomTag title="Ajax"/>
+    <CustomTag title="CSS/SCSS/LESS"/>
+    <CustomTag title="REACT/REDUX"/>
+    <CustomTag title="Node/Express"/>
+    <CustomTag title="GIT/Github/AWS"/>
+    <CustomTag title="MongoDB"/>
+    <CustomTag title="Mocha/Jest/Jasmin"/>
+    <CustomTag title="Jira/Confluence/Postman"/>
+    <CustomTag title="JQuery"/>
+    <CustomTag title="Storybook"/>
+  </>
+);

@@ -1,14 +1,12 @@
-import { Typography } from 'antd'
 import { Experience } from '..'
+import { StyledTitle } from './styles'
 import { CapgeminiData, INGData, IKData, HospitalData } from './data'
-
-const { Title } = Typography
 
 export const ExperienceGroup = () => (
 	<section className='container'>
-		<Title level={3} className='right-title'>
+		<StyledTitle level={3}>
 			Experience
-		</Title>
+		</StyledTitle>
 		<Experience
 			title='Software Engineer'
 			company='Capgemini SE'
