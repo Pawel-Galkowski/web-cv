@@ -1,34 +1,7 @@
-.body {
-    background-color: #94D9EA;
-    max-width: 80%;
-}
-
-.main-content {
-    min-height: 100vh;
-    width: 80%;
-    margin: 2rem auto;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-}
-
-.left-section {
-    grid-column: span 8;
-    background-color: #f7f7f7
-}
-
-.right-section {
-    grid-column: span 4;
-    background-color: red;
-}
-
 .para {
     line-height: 1.6rem;
     color: #718096;
     font-size: 1rem;
-}
-
-.left-content {
-    padding: 2rem 3rem;
 }
 
 .main-title {
@@ -76,10 +49,6 @@
     padding-right: .5rem;
     font-size: 1.2rem;
     color: #2D9CDB;
-}
-
-.right-main-content {
-    padding: 2rem 3rem;
 }
 
 .sect {

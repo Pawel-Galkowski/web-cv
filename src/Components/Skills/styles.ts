@@ -1,16 +1,15 @@
-export const SkillsStyles = {
-  display: "block",
+import { Typography, Tag } from 'antd'
+import styled from 'styled-components'
 
-  ".ant-tag": {
-    margin: "4px",
-    backgroundColor: "blue",
-    color: "white",
-    border: "blue",
-    borderRadius: "5px",
-    textTransform: "capitalize",
-  },
+export const StyledTag = styled(Tag)`
+	margin: '4px';
+	background-color: 'blue';
+	color: 'white';
+	border: 'blue';
+	border-radius: '5px';
+	text-transform: 'capitalize';
+`
 
-  "h3.ant-typography": {
-    color: "white",
-  },
-}
+export const StyledTitle = styled(Typography.Title)`
+	color: 'white';
+`

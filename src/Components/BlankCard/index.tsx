@@ -1,5 +1,12 @@
 import { Col, Row } from "antd"
-import { cardStyles } from "./styles"
+import {
+	cardStyles,
+	blankCardStyles,
+	mainContentStyles,
+	firstSectionStyles,
+	secondSectionStyles,
+	mainContentPadding,
+} from "./styles"
 import {
 	About,
 	Contact,
@@ -9,21 +16,20 @@ import {
 	Languages,
 	Skills,
 } from "../"
-import "./styles.css"
 
 const BlankCard: React.FC = (): JSX.Element => (
-	<Row className="body">
+	<Row style={blankCardStyles}>
 		<Col span={24} style={cardStyles}>
-			<main className="main-content">
+			<main style={mainContentStyles}>
 				<About />
 				<Contact />
-				<section className="left-section">
-					<div className="left-content">
+				<section style={firstSectionStyles}>
+					<div style={mainContentPadding}>
 						<ExperienceGroup />
 					</div>
 				</section>
-				<section className="right-section">
-					<div className="right-main-content">
+				<section style={secondSectionStyles}>
+					<div style={mainContentPadding}>
 						<Skills />
 						<Education />
 						<Languages />
