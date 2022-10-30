@@ -2,7 +2,7 @@ import { AppStyles } from "./styles";
 import { BlankCard, Navigation } from "..";
 import 'antd/dist/antd.css';
 
-const MainPage = () => (
+const MainPage: React.FC = () => (
   <div style={AppStyles}>
     <BlankCard />
     <Navigation />

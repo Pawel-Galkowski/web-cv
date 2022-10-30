@@ -1,24 +1,30 @@
-import { Typography, Tag } from "antd";
-import "./styles.css";
+import { FC } from 'react'
+import { StyledTitle, StyledTag } from './styles'
 
-const { Title } = Typography;
+interface CustomTag {
+	title: string
+}
 
-export const Skills: React.FC = (): JSX.Element => (
-  <>
-    <Title level={3}>Skills</Title>
-    <Tag>Javascript</Tag>
-    <Tag>TypeScript</Tag>
-    <Tag>Angular</Tag>
-    <Tag>HTML/Bootstrap/Grid/Flex</Tag>
-    <Tag>Ajax</Tag>
-    <Tag>CSS/SCSS/LESS</Tag>
-    <Tag>REACT/REDUX</Tag>
-    <Tag>Node/Express</Tag>
-    <Tag>GIT/Github/AWS</Tag>
-    <Tag>MongoDB</Tag>
-    <Tag>Mocha/Jest/Jasmin</Tag>
-    <Tag>Jira/Confluence/Postman</Tag>
-    <Tag>JQuery</Tag>
-    <Tag>Storybook</Tag>
-  </>
-);
+const CustomTag: FC<CustomTag> = ({ title }): JSX.Element => (
+	<StyledTag>{title}</StyledTag>
+)
+
+export const Skills: FC = (): JSX.Element => (
+	<>
+		<StyledTitle level={3}>Skills</StyledTitle>
+		<CustomTag title='Javascript' />
+		<CustomTag title='TypeScript' />
+		<CustomTag title='Angular' />
+		<CustomTag title='HTML/Bootstrap/Grid/Flex' />
+		<CustomTag title='Ajax' />
+		<CustomTag title='CSS/SCSS/LESS' />
+		<CustomTag title='REACT/REDUX' />
+		<CustomTag title='Node/Express' />
+		<CustomTag title='GIT/Github/AWS' />
+		<CustomTag title='MongoDB' />
+		<CustomTag title='Mocha/Jest/Jasmin' />
+		<CustomTag title='Jira/Confluence/Postman' />
+		<CustomTag title='JQuery' />
+		<CustomTag title='Storybook' />
+	</>
+)
