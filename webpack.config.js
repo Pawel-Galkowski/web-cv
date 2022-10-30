@@ -9,11 +9,6 @@ const isProduction = process.env.NODE_ENV === 'production'
 
 const config = {
 	entry: './src/index.tsx',
-	performance: {
-		hints: false,
-		maxEntrypointSize: 512000,
-		maxAssetSize: 512000,
-	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 	},
@@ -38,16 +33,13 @@ const config = {
 				type: 'asset',
 			},
 			{
-				test: /\.css$/,
-				use: [
-					'style-loader',
-					'css-loader',
-				],
+				test: /\.css$/i,
+				use: ['style-loader', 'css-loader'],
 			},
 		],
 	},
 	resolve: {
-		extensions: ['.tsx', '.ts', '.jsx', '.js', '.css', '.scss'],
+		extensions: ['.tsx', '.ts', '.jsx', '.js', '...'],
 		fallback: {
 			fs: false,
 			os: false,
@@ -73,4 +65,3 @@ module.exports = () => {
 	}
 	return config
 }
-

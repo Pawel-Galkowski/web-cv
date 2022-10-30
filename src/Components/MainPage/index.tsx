@@ -4,7 +4,7 @@ import { BlankCard, Navigation } from "..";
 const MainPage: React.FC = () => (
   <div style={AppStyles}>
     <BlankCard />
-    {/* <Navigation /> */}
+    <Navigation />
   </div>
 );
 

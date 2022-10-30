@@ -4,7 +4,7 @@ export const blankCardStyles = {
 }
 
 export const cardStyles = {
-	border: "1px solid gray",
+    border: '1px solid gray',
 }
 
 export const mainContentStyles = {

@@ -1,36 +1,44 @@
-import { Col, Row } from "antd"
+import { Col, Row } from 'antd'
 import {
-  About,
-  Contact,
-  Education,
-  ExperienceGroup,
-  Hobby,
-  Languages,
-  Skills,
-} from "../";
+	cardStyles,
+	blankCardStyles,
+	mainContentStyles,
+	firstSectionStyles,
+	secondSectionStyles,
+	mainContentPadding,
+} from './styles'
+import {
+	About,
+	Contact,
+	Education,
+	ExperienceGroup,
+	Hobby,
+	Languages,
+	Skills,
+} from '../'
 
 const BlankCard: React.FC = (): JSX.Element => (
-  <Row className="body">
-    <Col span={24} style={cardStyles}>
-      <main className="main-content">
-        <About />
-        <Contact />
-        <section className="left-section">
-          <div className="left-content">
-            <ExperienceGroup />
-          </div>
-        </section>
-        <section className="right-section">
-          <div className="right-main-content">
-            <Skills />
-            <Education />
-            <Languages />
-            <Hobby />
-          </div>
-        </section>
-      </main>
-    </Col>
-  </Row>
-);
+	<Row style={blankCardStyles}>
+		<Col span={24} style={cardStyles}>
+			<main style={mainContentStyles}>
+				<About />
+				<Contact />
+				<section style={firstSectionStyles}>
+					<div style={mainContentPadding}>
+						<ExperienceGroup />
+					</div>
+				</section>
+				<section style={secondSectionStyles}>
+					<div style={mainContentPadding}>
+						<Skills />
+						<Education />
+						<Languages />
+						<Hobby />
+					</div>
+				</section>
+			</main>
+		</Col>
+	</Row>
+)
 
 export default BlankCard
