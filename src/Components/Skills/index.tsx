@@ -1,11 +1,21 @@
-import { StyledTitle, StyledTag } from './styles'
+import { Tag } from 'antd'
+import { FC } from 'react'
+import { StyledTitle, StyledTag, tagStyles } from './styles'
 
-export const Skills: React.FC = (): JSX.Element => (
-	<>
+interface CustomTag {
+	children: string
+}
+
+const CustomTag: React.FC<CustomTag> = ({ children }): JSX.Element => (
+	<StyledTag>{children}</StyledTag>
+)
+
+export const Skills: FC = (): JSX.Element => (
+	<div>
 		<StyledTitle level={3}>Skills</StyledTitle>
-		<StyledTag>Javascript</StyledTag>
-		<StyledTag>TypeScript</StyledTag>
-		<StyledTag>Angular</StyledTag>
+		<CustomTag>Javascript</CustomTag>
+		<CustomTag>TypeScript</CustomTag>
+		<Tag>Angular</Tag>
 		<StyledTag>HTML/Bootstrap/Grid/Flex</StyledTag>
 		<StyledTag>Ajax</StyledTag>
 		<StyledTag>CSS/SCSS/LESS</StyledTag>
@@ -17,5 +27,5 @@ export const Skills: React.FC = (): JSX.Element => (
 		<StyledTag>Jira/Confluence/Postman</StyledTag>
 		<StyledTag>JQuery</StyledTag>
 		<StyledTag>Storybook</StyledTag>
-	</>
+	</div>
 )

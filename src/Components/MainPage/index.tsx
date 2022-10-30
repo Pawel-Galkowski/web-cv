@@ -1,7 +1,7 @@
 import { AppStyles } from "./styles";
 import { BlankCard, Navigation } from "..";
 
-const MainPage = () => (
+const MainPage: React.FC = () => (
   <div style={AppStyles}>
     <BlankCard />
     <Navigation />

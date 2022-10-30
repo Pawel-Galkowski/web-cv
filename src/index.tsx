@@ -3,8 +3,6 @@ import { createRoot } from "react-dom/client";
 import { MainPage } from "./Components";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import "./index.css";
-import 'antd/dist/antd.css';
 
 const root = createRoot(document.getElementById("root") as HTMLElement);
 root.render(
