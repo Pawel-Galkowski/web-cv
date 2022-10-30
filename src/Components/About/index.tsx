@@ -14,7 +14,7 @@ export const About: React.FC = (): JSX.Element => (
         understanding of Web Development, developing web applications using
         JavaScript frameworks and libraries with relative and no-relative
         databases.
-      </Paragraph>
+        </Paragraph>
     </div>
     <Avatar style={AvatarStyles} size={150} src="/avatar.jpg" alt="avatar" icon={<UserOutlined />} />
   </section>

@@ -6,7 +6,7 @@ import { ExperiencedType } from './types'
 const { Title, Paragraph } = Typography
 
 export const Experience: React.FC<ExperiencedType> = ({
-	title,
+  title,
 	company,
 	data,
 	isPresent,
@@ -15,7 +15,7 @@ export const Experience: React.FC<ExperiencedType> = ({
 	location,
 	description,
 }) => (
-	<article style={experienceStyles}>
+  <article style={experienceStyles}>
 		<Title level={3}>{title}</Title>
 		<Title level={4}>{company}</Title>
 		<small>{description}</small>
@@ -39,4 +39,4 @@ export const Experience: React.FC<ExperiencedType> = ({
 			)}
 		/>
 	</article>
-)
+);

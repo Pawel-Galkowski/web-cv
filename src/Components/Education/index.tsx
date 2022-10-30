@@ -1,15 +1,15 @@
 import { Typography } from "antd"
-import { educationStyles, detailsStyles, titleStyles } from "./styles"
+import { educationStyles, detailsStyles, titleStyles, schoolStyles } from "./styles"
 
 const { Title, Paragraph } = Typography
 
 export const Education: React.FC = (): JSX.Element => (
-	<div style={educationStyles}>
+  <div style={educationStyles}>
 		<Title level={3}>Education</Title>
 		<Title level={5} style={titleStyles}>
 			BTech in Computer Science
 		</Title>
-		<Title level={4} style={titleStyles}>
+		<Title level={4} style={schoolStyles}>
 			Opole University of Technology
 		</Title>
 		<div style={detailsStyles}>
@@ -22,4 +22,4 @@ export const Education: React.FC = (): JSX.Element => (
 			Backend is created using Node/Express and MongoDB.
 		</Paragraph>
 	</div>
-)
+);

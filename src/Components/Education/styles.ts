@@ -11,5 +11,10 @@ export const detailsStyles: CSSProperties = {
 
 export const titleStyles: CSSProperties = {
 	marginTop: 0,
+	color: "blue",
+}
+
+export const schoolStyles: CSSProperties = {
+	marginTop: 0,
 	color: "white",
 }
