@@ -1,0 +1,7 @@
+export { About } from './About'
+export { Contact } from './Contact'
+export { Education } from './Education'
+export { Skills } from './Skills'
+export { Languages } from './Languages'
+export { Hobby } from './Hobby'
+export { ExperienceGroup } from './ExperienceGroup'

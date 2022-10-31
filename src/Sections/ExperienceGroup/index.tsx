@@ -1,10 +1,10 @@
-import { Experience } from '..'
-import { StyledTitle } from './styles'
+import { Experience } from '../../Components'
 import { CapgeminiData, INGData, IKData, HospitalData } from './data'
+import { SectionTitle } from '../../Components/SectionTitle'
 
 export const ExperienceGroup: React.FC = () => (
 	<section>
-		<StyledTitle level={3}>Experience</StyledTitle>
+		<SectionTitle title='Experience' />
 		<Experience
 			title='Software Engineer'
 			company='Capgemini SE'

@@ -1,6 +1,5 @@
-import { List, Typography } from 'antd'
-
-const { Title } = Typography
+import { List } from 'antd'
+import { SectionTitle } from '../../Components/SectionTitle'
 
 const SkillsData = [
 	{
@@ -15,7 +14,7 @@ const SkillsData = [
 
 export const Languages: React.FC = (): JSX.Element => (
 	<div className='container'>
-		<Title level={3}>Languages</Title>
+		<SectionTitle title='Languages' />
 		<List
 			itemLayout='horizontal'
 			dataSource={SkillsData}

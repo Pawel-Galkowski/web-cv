@@ -1,4 +1,4 @@
-import { Typography, Tag } from 'antd'
+import { Tag } from 'antd'
 import styled from 'styled-components'
 
 export const StyledTag = styled(Tag)`
@@ -8,8 +8,4 @@ export const StyledTag = styled(Tag)`
 	border: blue;
 	border-radius: 5px;
 	text-transform: capitalize;
-`
-
-export const StyledTitle = styled(Typography.Title)`
-	color: white !important;
 `

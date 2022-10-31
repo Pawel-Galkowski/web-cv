@@ -6,7 +6,7 @@ import {
 	firstSectionStyles,
 	secondSectionStyles,
 	mainContentPadding,
-} from "./styles"
+} from './styles'
 import {
 	About,
 	Contact,
@@ -15,12 +15,12 @@ import {
 	Hobby,
 	Languages,
 	Skills,
-} from '../'
+} from '../../Sections'
 
 const BlankCard: React.FC = (): JSX.Element => (
 	<Row style={blankCardStyles}>
 		<Col span={24} style={cardStyles}>
-    <main style={mainContentStyles}>
+			<main style={mainContentStyles}>
 				<About />
 				<Contact />
 				<section style={firstSectionStyles}>
