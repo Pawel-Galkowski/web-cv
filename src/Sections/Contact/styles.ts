@@ -1,8 +1,8 @@
 export const ContactInfoStyles = {
-	gridColumn: 'span 12',
+	gridColumn: 'span 24',
 	backgroundColor: 'darkslategray',
 	display: 'grid',
-	padding: '12px 24px',
+	padding: '1rem 3rem',
 	gridTemplateColumns: 'repeat(2, auto)',
 	color: 'white',
 

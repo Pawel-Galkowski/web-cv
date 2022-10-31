@@ -12,16 +12,16 @@ export const mainContentStyles = {
 	width: "80%",
 	margin: "2rem auto",
 	display: "grid",
-	gridTemplateColumns: "repeat(12, 1fr)",
+	gridTemplateColumns: "repeat(24, 1fr)",
 }
 
 export const firstSectionStyles = {
-	gridColumn: "span 8",
+	gridColumn: "span 15",
 	backgroundColor: "#f7f7f7",
 }
 
 export const secondSectionStyles = {
-	gridColumn: "span 4",
+	gridColumn: "span 9",
 	backgroundColor: "#f7f7f7",
 }
 
