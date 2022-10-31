@@ -1,9 +1,15 @@
 import { PlayCircleFilled } from '@ant-design/icons'
-import { List, Typography } from 'antd'
-import { experienceStyles, listStyles } from './styles'
+import { List } from 'antd'
+import {
+	experienceStyles,
+	detailsStyles,
+	descritionStyles,
+	StyledParagraph,
+	StyledCompanyTitle,
+	StyledJobTitle,
+	StyledList,
+} from './styles'
 import { ExperiencedType } from './types'
-
-const { Title, Paragraph } = Typography
 
 const Experience: React.FC<ExperiencedType> = ({
 	title,
@@ -16,26 +22,25 @@ const Experience: React.FC<ExperiencedType> = ({
 	description,
 }) => (
 	<article style={experienceStyles}>
-		<Title level={3}>{title}</Title>
-		<Title level={4}>{company}</Title>
-		<small>{description}</small>
-		<div className='exp-details'>
-			<Paragraph>
-				{from} - {isPresent ? 'present' : to}
-			</Paragraph>
-			<Paragraph>{location}</Paragraph>
+		<StyledJobTitle level={3}>{title}</StyledJobTitle>
+		<StyledCompanyTitle level={4}>{company}</StyledCompanyTitle>
+		<small style={descritionStyles}>{description}</small>
+		<div style={detailsStyles}>
+			<StyledParagraph>
+				{from} - {isPresent ? 'Present' : to}
+			</StyledParagraph>
+			<StyledParagraph>{location}</StyledParagraph>
 		</div>
 		<List
 			itemLayout='horizontal'
 			dataSource={data}
 			renderItem={(item) => (
-				<List.Item>
+				<StyledList>
 					<List.Item.Meta
-						avatar={<PlayCircleFilled style={{ color: 'blue' }} />}
+						avatar={<PlayCircleFilled style={{ color: 'red' }} />}
 						description={item.description}
-						style={listStyles}
 					/>
-				</List.Item>
+				</StyledList>
 			)}
 		/>
 	</article>
