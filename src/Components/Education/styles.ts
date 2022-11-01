@@ -1,6 +1,7 @@
 import { CSSProperties } from 'react'
 import { Typography } from 'antd'
 import styled from 'styled-components'
+import Colors from '../../theme'
 
 export const educationStyles: CSSProperties = {
 	margin: "12px 0",
@@ -24,5 +25,5 @@ export const StyledCompanyTitle = styled(Typography.Title)`
 `
 
 export const StyledParagraph = styled(Typography.Paragraph)`
-	color: red !important;
+	color: ${Colors.orange} !important;
 `

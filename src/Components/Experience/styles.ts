@@ -1,6 +1,7 @@
 import { CSSProperties } from 'react'
 import { Typography, List } from 'antd'
 import styled from 'styled-components'
+import Colors from '../../theme'
 
 export const StyledJobTitle = styled(Typography.Title)`
 	margin: 0 !important;
@@ -29,7 +30,7 @@ export const detailsStyles: CSSProperties = {
 }
 
 export const StyledParagraph = styled(Typography.Paragraph)`
-	color: red !important;
+	color: ${Colors.orange} !important;
 `
 
 export const StyledList = styled(List.Item)`

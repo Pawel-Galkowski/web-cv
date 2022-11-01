@@ -1,10 +1,12 @@
+import Colors from '../../theme'
+
 export const ContactInfoStyles = {
 	gridColumn: 'span 24',
-	backgroundColor: 'darkslategray',
+	backgroundColor: Colors['dark-gray'],
 	display: 'grid',
 	padding: '1rem 3rem',
 	gridTemplateColumns: 'repeat(2, auto)',
-	color: 'white',
+	color: Colors.white,
 
 	'& > *': {
 		display: 'flex',
@@ -16,6 +18,6 @@ export const ContactInfoStyles = {
 	},
 
 	'& a': {
-		color: 'white',
+		color: Colors.white,
 	},
 }

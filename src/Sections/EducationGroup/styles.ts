@@ -1,4 +1,6 @@
 import { CSSProperties } from "react"
+import Colors from '../../theme'
+
 export const educationStyles: CSSProperties = {
 	margin: "12px 0",
 }
@@ -11,10 +13,10 @@ export const detailsStyles: CSSProperties = {
 
 export const titleStyles: CSSProperties = {
     marginTop: 0,
-	color: "blue",
+	color: Colors.blue,
 }
 
 export const schoolStyles: CSSProperties = {
 	marginTop: 0,
-	color: "white",
+	color: Colors.white,
 }

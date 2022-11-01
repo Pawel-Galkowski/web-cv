@@ -1,22 +1,11 @@
 import { CSSProperties } from 'react'
-
-// export const aboutLayoutStyles: CSSProperties = {
-//   gridColumn: 'span 12',
-//   display: 'grid',
-//   gridTemplateColumns: '3fr 1fr',
-//   gridTemplateRows: '1fr',
-//   gridColumnGap: '20px',
-//   gridRowGap: 0,
-//   backgroundColor: '#00324a',
-//   padding: '2rem 3rem',
-//   alignItems: 'center',
-// }
-
+import Colors from '../../theme'
+ 
 export const aboutLayoutStyles: CSSProperties = {
   gridColumn: 'span 24',
   display: 'flex',
   gap: '20px',
-  backgroundColor: '#00324a',
+  backgroundColor: Colors.grey,
   padding: '2rem 3rem',
   alignItems: 'center',
   justifyContent: 'space-between',
@@ -27,19 +16,19 @@ export const bioStyles: CSSProperties = {
 }
 
 export const avatarStyles: CSSProperties = {
-  border: '8px solid blue',
+  border: `8px solid ${Colors.orange}`,
 }
 
 export const nameStyles: CSSProperties = {
-  color: 'white',
+  color: Colors.white,
   marginBottom: 0,
 }
 
 export const roleStyles: CSSProperties = {
-  color: 'blue',
+  color: Colors.orange,
   marginTop: 0,
 }
 
 export const typographyStyles: CSSProperties = {
-  color: 'white',
+  color: Colors.white,
 }
