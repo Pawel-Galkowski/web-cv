@@ -15,8 +15,8 @@ const Navigation: FC = () => {
     console.log(key)
   }, [])
   return (
-    <div style={{ maxWidth: '350px', minWidth: '300px' }}>
-      asdasdasd
+    <nav style={{ maxWidth: '350px', minWidth: '300px' }}>
+      CV Informations
       <Collapse defaultActiveKey={['1']} onChange={onChange}>
         <Panel header='Dodaj zdjecie' key='1'>
           <p>{text}</p>
@@ -55,7 +55,7 @@ const Navigation: FC = () => {
           <p>{text}</p>
         </Panel>
       </Collapse>
-    </div>
+    </nav>
   )
 }
 
