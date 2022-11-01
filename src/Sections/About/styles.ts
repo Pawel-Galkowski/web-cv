@@ -1,29 +1,34 @@
-export const AboutLayoutStyles = {
-    gridColumn: "span 12",
-    display: "grid",
-    gridTemplateColumns: "3fr 1fr",
-    gridTemplateRows: "1fr",
-    gridColumnGap: "20px",
-    gridRowGap: 0,
-    backgroundColor: "#00324a",
-    padding: "24px",
-    alignItems: "center",
-  };
-  
-  export const AvatarStyles = {
-    border: "8px solid blue",
-  };
-  
-  export const NameStyles = {
-    color: "white",
-    marginBottom: 0,
-  };
-  
-  export const RoleStyles = {
-    color: "blue",
-    marginTop: 0,
-  };
-  
-  export const TypographyStyles = {
-    color: "white",
-  };
+import { CSSProperties } from 'react'
+import Colors from '../../theme'
+ 
+export const aboutLayoutStyles: CSSProperties = {
+  gridColumn: 'span 24',
+  display: 'flex',
+  gap: '20px',
+  backgroundColor: Colors.grey,
+  padding: '2rem 3rem',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+}
+
+export const bioStyles: CSSProperties = {
+  maxWidth: '80%'
+}
+
+export const avatarStyles: CSSProperties = {
+  border: `8px solid ${Colors.orange}`,
+}
+
+export const nameStyles: CSSProperties = {
+  color: Colors.white,
+  marginBottom: 0,
+}
+
+export const roleStyles: CSSProperties = {
+  color: Colors.orange,
+  marginTop: 0,
+}
+
+export const typographyStyles: CSSProperties = {
+  color: Colors.white,
+}

@@ -10,7 +10,7 @@ import {
 import {
 	About,
 	Contact,
-	Education,
+	EducationGroup,
 	ExperienceGroup,
 	Hobby,
 	Languages,
@@ -31,7 +31,7 @@ const BlankCard: React.FC = (): JSX.Element => (
 				<section style={secondSectionStyles}>
 					<div style={mainContentPadding}>
 						<Skills />
-						<Education />
+						<EducationGroup />
 						<Languages />
 						<Hobby />
 					</div>

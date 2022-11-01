@@ -1,4 +1,5 @@
 import { CSSProperties } from "react";
+import Colors from '../../theme'
 
 export const contactItemStyles: CSSProperties = {
     display: 'flex',
@@ -8,7 +9,7 @@ export const contactItemStyles: CSSProperties = {
 }
 
 export const linkStyles: CSSProperties = {
-    color: 'white',
+    color: Colors.white,
     fontWeight: 'bold',
     textDecoration: 'none',
 }

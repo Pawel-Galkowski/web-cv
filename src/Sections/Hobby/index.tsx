@@ -1,19 +1,22 @@
-import { PlayCircleFilled, RocketFilled } from '@ant-design/icons'
+import { PlayCircleFilled, AimOutlined, CarOutlined, FundProjectionScreenOutlined, FireOutlined } from '@ant-design/icons'
 import { List } from 'antd'
 import { SectionTitle } from '../../Components/SectionTitle'
 
 const SkillsData = [
 	{
-		icon: <RocketFilled />,
+		icon: <AimOutlined />,
 		description: 'E-Sport',
 	},
 	{
+		icon: <CarOutlined />,
 		description: 'Globetrotting',
 	},
 	{
+		icon: <FireOutlined />,
 		description: 'Kickboxing',
 	},
 	{
+		icon: <FundProjectionScreenOutlined />,
 		description: 'Analitics',
 	},
 ]

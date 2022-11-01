@@ -20,3 +20,11 @@ code {
 	margin: 0 !important;
 }
 
+
+.ant-list-item-meta-description {
+	color: black !important;
+}
+
+small {
+	color: #867d84;
+}

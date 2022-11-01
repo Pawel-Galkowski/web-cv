@@ -1,14 +1,16 @@
-import { AppStyles } from "./styles";
-import { BlankCard, Navigation } from "../../Components";
-import 'antd/dist/antd.css';
+import { centerStyles, appStyles } from './styles'
+import { BlankCard, Navigation } from '../../Components'
+import 'antd/dist/antd.css'
 
 const MainPage: React.FC = () => (
-  <div style={AppStyles}>
-    <BlankCard />
-    <Navigation />
-  </div>
-);
+  <main style={appStyles}>
+    <div style={centerStyles}>
+      <BlankCard />
+      <Navigation />
+    </div>
+  </main>
+)
 
-export default MainPage;
+export default MainPage
 
 2

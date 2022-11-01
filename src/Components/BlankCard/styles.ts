@@ -1,6 +1,9 @@
+import Colors from '../../theme'
+
+
 export const blankCardStyles = {
-	backgroundColor: "#94D9EA",
-	maxWidth: "80%",
+	backgroundColor: Colors.ocean,
+	maxWidth: "1240px",
 }
 
 export const cardStyles = {
@@ -12,17 +15,17 @@ export const mainContentStyles = {
 	width: "80%",
 	margin: "2rem auto",
 	display: "grid",
-	gridTemplateColumns: "repeat(12, 1fr)",
+	gridTemplateColumns: "repeat(24, 1fr)",
 }
 
 export const firstSectionStyles = {
-	gridColumn: "span 8",
-	backgroundColor: "#f7f7f7",
+	gridColumn: "span 15",
+	backgroundColor: Colors.white,
 }
 
 export const secondSectionStyles = {
-	gridColumn: "span 4",
-	backgroundColor: "#f7f7f7",
+	gridColumn: "span 9",
+	backgroundColor: Colors.white,
 }
 
 export const mainContentPadding = {
