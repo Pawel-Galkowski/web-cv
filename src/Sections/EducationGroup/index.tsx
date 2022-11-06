@@ -11,7 +11,9 @@ export const EducationGroup: React.FC = (): JSX.Element => (
       from='2016'
       to='2020'
       location='Opole, Poland'
-      project='Developed a full-stack web application, "Recrutiment Platform" using React that allows users to post job for recruiters and find job for other users. Backend is created using Node/Express and MongoDB.'
+      project={[
+        'Developed a full-stack web application, "Recrutiment Platform" using React that allows users to post job for recruiters and find job for other users. Backend is created using Node/Express and MongoDB.',
+      ]}
     />
   </div>
 )
