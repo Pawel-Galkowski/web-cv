@@ -8,31 +8,38 @@ import {
   roleStyles,
   typographyStyles,
 } from './styles'
+import { useAppSelector } from '../../Connectors/hooks'
 
 const { Title, Paragraph } = Typography
 
-export const About: React.FC = (): JSX.Element => (
-  <section style={aboutLayoutStyles}>
-    <article style={bioStyles}>
-      <Title level={2} style={nameStyles}>
-        Pawel Galkowski
-      </Title>
-      <Title level={4} style={roleStyles}>
-        Software Engineer
-      </Title>
-      <Paragraph style={typographyStyles}>
-        Creative Software Engineer with 4+ years of experience with
-        understanding of Web Development, developing web applications using
-        JavaScript frameworks and libraries with relative and no-relative
-        databases.
-      </Paragraph>
-    </article>
-    <Avatar
-      style={avatarStyles}
-      size={150}
-      src='/avatar.jpg'
-      alt='avatar'
-      icon={<UserOutlined />}
-    />
-  </section>
-)
+export const About: React.FC = (): JSX.Element => {
+  const profileInformations = useAppSelector(({ profile }) => {
+    return {
+      name: profile.name,
+      title: profile.title,
+      bio: profile.bio
+    }
+  })
+  return (
+    <section style={aboutLayoutStyles}>
+      <article style={bioStyles}>
+        <Title level={2} style={nameStyles}>
+          {profileInformations.name}
+        </Title>
+        <Title level={4} style={roleStyles}>
+          {profileInformations.title}
+        </Title>
+        <Paragraph style={typographyStyles}>
+          {profileInformations.bio}
+        </Paragraph>
+      </article>
+      <Avatar
+        style={avatarStyles}
+        size={150}
+        src='/avatar.jpg'
+        alt='avatar'
+        icon={<UserOutlined />}
+      />
+    </section>
+  )
+}

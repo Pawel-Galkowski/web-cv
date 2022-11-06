@@ -25,7 +25,7 @@ const Experience: React.FC<EducationType> = ({
       </StyledParagraph>
       <StyledParagraph>{location}</StyledParagraph>
     </div>
-    <p>{project}</p>
+    <ul style={{ listStyle: 'none', paddingInlineStart: 0 }}>{project.map((item: string) => <li>{item}</li>)}</ul>
   </article>
 )
 
