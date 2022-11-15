@@ -1,5 +1,5 @@
 import { Collapse } from 'antd'
-import { About, Bio, Languages, SocialMedia } from '../../Connectors'
+import { About, Bio, Languages, Skills, SocialMedia } from '../../Connectors'
 
 const { Panel } = Collapse
 
@@ -35,7 +35,7 @@ const Navigation: React.FC = () => (
         <Languages />
       </Panel>
       <Panel header='Skills' key='8'>
-        <p>{text}</p>
+        <Skills />
       </Panel>
       <Panel header='Atuty' key='9' collapsible='disabled'>
         <p>{text}</p>

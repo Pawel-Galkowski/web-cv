@@ -11,12 +11,9 @@ const Languages: FC = () => {
 
   const [languages, ] = useState<LanguageType[]>(languagesInformations)
 
-  // [{level: '', title: ''}, {level: '', title: ''}]
-
   return (
     <div style={inputStyles}>
-      {languages &&
-        languages.map((item: LanguageType, index: number) => (
+      {languages?.map((item: LanguageType, index: number) => (
           <SingleLanguage item={item} index={index} key={`${item.title}${item.level}`}/>
         ))}
     </div>

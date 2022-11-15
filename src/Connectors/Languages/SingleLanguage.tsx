@@ -36,13 +36,11 @@ export const SingleLanguage: FC<Props> = ({ item, index }) => {
       <Input
         value={language.title}
         name='Title'
-        alt={`${index}`}
         onChange={onValueChange}
       />
       <Input
         value={language.level}
         name='Level'
-        alt={`${index}`}
         onChange={onValueChange}
       />
     </div>

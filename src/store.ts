@@ -1,11 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { languagesReducer, profileReducer, socialMediaReducer } from './Reducers'
+import { languagesReducer, profileReducer, skillsReducer, socialMediaReducer } from './Reducers'
 
 export const store = configureStore({
   reducer: {
     profile: profileReducer,
     socialMedia: socialMediaReducer,
     languages: languagesReducer,
+    skills: skillsReducer
   },
 })
 
