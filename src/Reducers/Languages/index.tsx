@@ -14,7 +14,14 @@ const LanguagesReducer = (state = InitialState, action: AnyAction) => {
     case GET_LANGUAGES:
       return {
         ...state,
-        lang: payload,
+        lang: state.lang.map((item, index) =>
+          payload.index === index
+            ? {
+                title: payload.title,
+                level: payload.level,
+              }
+            : item
+        ),
         loading: false,
       }
     case PROFILE_ERROR:
