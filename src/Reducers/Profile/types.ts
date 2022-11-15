@@ -6,14 +6,14 @@ export const SET_BIO = 'SET_BIO'
 export const GET_BIO = 'GET_BIO'
 export const PROFILE_ERROR = 'PROFILE_ERROR'
 
-export type InitialProfileType = {
+type InitialType = {
   loading: boolean
   name: string
   title: string
   bio: string
 }
 
-export const InitialState: InitialProfileType = {
+export const InitialState: InitialType = {
   loading: true,
   name: 'Pawel Galkowski',
   title: 'Software Engineer',

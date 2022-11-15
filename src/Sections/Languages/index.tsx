@@ -1,29 +1,25 @@
 import { List } from 'antd'
 import { SectionTitle } from '../../Components/SectionTitle'
+import { useAppSelector } from '../../Connectors/hooks'
+import { LanguageType } from '../../Reducers/Languages/types'
 import { ListStyles } from './styles'
 
-const skillsData = [
-  {
-    title: 'Polish',
-    description: 'Native or Bilingual Proficiency',
-  },
-  {
-    title: 'English',
-    description: 'Full Professional Proficiency',
-  },
-]
-
-export const Languages: React.FC = (): JSX.Element => (
-  <section>
-    <SectionTitle title='Languages' />
-    <List
-      itemLayout='horizontal'
-      dataSource={skillsData}
-      renderItem={(item) => (
-        <List.Item>
-          <ListStyles title={item.title} description={item.description} />
-        </List.Item>
-      )}
-    />
-  </section>
-)
+export const Languages: React.FC = (): JSX.Element => {
+  const languagesInformations = useAppSelector<LanguageType[]>(
+    ({ languages }) => languages.lang
+  )
+  return (
+    <section>
+      <SectionTitle title='Languages' />
+      <List
+        itemLayout='horizontal'
+        dataSource={languagesInformations}
+        renderItem={(item) => (
+          <List.Item>
+            <ListStyles title={item.title} description={item.level} />
+          </List.Item>
+        )}
+      />
+    </section>
+  )
+}

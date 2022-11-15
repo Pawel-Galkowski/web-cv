@@ -1,7 +1,8 @@
 import { FC, useState, useCallback, ChangeEvent } from 'react'
 import { Input } from 'antd'
-import { useAppSelector, useAppDispatch } from './hooks'
-import { SET_BIO } from '../Reducers/Profile/types';
+import { useAppSelector, useAppDispatch } from '../hooks'
+import { SET_BIO } from '../../Reducers/Profile/types'
+import { inputStyles } from './styles'
 
 const Bio: FC = () => {
   const bioInformations = useAppSelector(({ profile }) => profile.bio)
@@ -21,9 +22,16 @@ const Bio: FC = () => {
   )
 
   return (
-    <>
-      <Input.TextArea placeholder='Bio' value={bio} onChange={onValueChange} />
-    </>
+    <div style={inputStyles}>
+      <label htmlFor='personalBio'>Bio: </label>
+      <Input.TextArea
+        id='personalBio'
+        placeholder='Bio'
+        name='Bio'
+        value={bio}
+        onChange={onValueChange}
+      />
+    </div>
   )
 }
 

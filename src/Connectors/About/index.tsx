@@ -34,11 +34,11 @@ const About: FC = () => {
     <>
       <div style={inputStyles}>
         <label htmlFor='personalName'>Name: </label>
-        <Input id='personalName' value={name} onChange={onValueChange} />
+        <Input id='personalName' value={name} name="name" onChange={onValueChange} />
       </div>
       <div style={inputStyles}>
         <label htmlFor='personalTitle'>Title: </label>
-        <Input id='personalTitle' value={title} onChange={onValueChange} />
+        <Input id='personalTitle' value={title} name="title" onChange={onValueChange} />
       </div>
     </>
   )
