@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { languagesReducer, profileReducer, skillsReducer, socialMediaReducer, HobbyReducer, EducationReducer } from './Reducers'
+import { languagesReducer, profileReducer, skillsReducer, socialMediaReducer, HobbyReducer, EducationReducer, ExperienceReducer } from './Reducers'
 
 export const store = configureStore({
   reducer: {
@@ -9,6 +9,7 @@ export const store = configureStore({
     skills: skillsReducer,
     hobby: HobbyReducer,
     edu: EducationReducer,
+    exp: ExperienceReducer,
   },
 })
 

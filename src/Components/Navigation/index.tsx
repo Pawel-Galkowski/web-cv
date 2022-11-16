@@ -7,6 +7,7 @@ import {
   SocialMedia,
   Hobby,
   Education,
+  Experience,
 } from '../../Connectors'
 
 const { Panel } = Collapse
@@ -34,7 +35,7 @@ const Navigation: React.FC = () => (
         <SocialMedia />
       </Panel>
       <Panel header='Experience' key='5'>
-        <p>{text}</p>
+      <Experience />
       </Panel>
       <Panel header='Education' key='6'>
         <Education />
