@@ -34,11 +34,11 @@ const Experience: React.FC<ExperiencedType> = ({
     <List
       itemLayout='horizontal'
       dataSource={data}
-      renderItem={(item) => (
+      renderItem={(item: string) => (
         <StyledList>
           <List.Item.Meta
             avatar={<PlayCircleFilled style={{ color: 'red' }} />}
-            description={item.description}
+            description={item}
           />
         </StyledList>
       )}

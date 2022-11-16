@@ -4,7 +4,7 @@ import { inputStyles } from './styles'
 import { SingleHobby } from './SingleHobby'
 import { HobbyType } from '../../Reducers/Hobby/types'
 
-const Languages: FC = () => {
+const Hobby: FC = () => {
   const hobbyInformations = useAppSelector(
     ({ hobby }) => hobby.hobby
   )
@@ -20,4 +20,4 @@ const Languages: FC = () => {
   )
 }
 
-export default Languages
+export default Hobby

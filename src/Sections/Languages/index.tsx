@@ -14,9 +14,9 @@ export const Languages: React.FC = (): JSX.Element => {
       <List
         itemLayout='horizontal'
         dataSource={languagesInformations}
-        renderItem={(item) => (
+        renderItem={({ title, level }) => (
           <List.Item>
-            <ListStyles title={item.title} description={item.level} />
+            <ListStyles title={title} description={level} />
           </List.Item>
         )}
       />

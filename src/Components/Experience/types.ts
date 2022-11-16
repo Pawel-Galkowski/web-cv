@@ -1,6 +1,6 @@
 export interface ExperiencedType {
 	title: string
-	data: Array<Record<string, string>>
+	data: string[]
 	company: string
 	isPresent?: boolean
 	from: string // change to Data

@@ -1,6 +1,6 @@
 export interface EducationType {
   title: string
-  project: string[]
+  project: string
   school: string
   isPresent?: boolean
   from: string // change to Data
