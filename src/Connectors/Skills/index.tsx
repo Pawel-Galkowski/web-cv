@@ -11,7 +11,7 @@ const Skills: FC = () => {
   return (
     <div style={inputStyles}>
       {skills?.map((item: string, index: number) => (
-        <SingleSkill item={item} index={index} />
+        <SingleSkill title={item} index={index} key={`${item}${index}`} />
       ))}
     </div>
   )

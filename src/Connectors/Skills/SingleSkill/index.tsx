@@ -1,20 +1,16 @@
 import { Input } from 'antd'
 import { ChangeEvent, FC, useCallback, useState } from 'react'
-import { useAppDispatch } from '../hooks'
+import { useAppDispatch } from '../../hooks'
+import { Props } from './types'
 
-interface Props {
-  item: string
-  index: number
-}
-
-export const SingleSkill: FC<Props> = ({ item, index }) => {
-  const [skills, setSkills] = useState<string>(item)
+export const SingleSkill: FC<Props> = ({ title, index }) => {
+  const [skill, setSkill] = useState<string>(title)
 
   const dispatch = useAppDispatch()
 
   const onValueChange = useCallback(
     ({ target }: ChangeEvent<HTMLInputElement>) => {
-      setSkills(target.value)
+      setSkill(target.value)
       dispatch({
         type: 'SET_SKILLS',
         payload: {
@@ -23,12 +19,12 @@ export const SingleSkill: FC<Props> = ({ item, index }) => {
         },
       })
     },
-    [skills]
+    [skill]
   )
 
   return (
     <div style={{ margin: '0 0 5px 0' }}>
-      <Input value={skills} onChange={onValueChange} />
+      <Input value={skill} onChange={onValueChange} />
     </div>
   )
 }

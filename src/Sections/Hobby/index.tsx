@@ -1,40 +1,29 @@
-import { PlayCircleFilled, AimOutlined, CarOutlined, FundProjectionScreenOutlined, FireOutlined } from '@ant-design/icons'
+import { PlayCircleFilled } from '@ant-design/icons'
 import { List } from 'antd'
 import { SectionTitle } from '../../Components/SectionTitle'
+import { useAppSelector } from '../../Connectors/hooks'
+import { icons } from '../../Icons'
+import { HobbyType } from '../../Reducers/Hobby/types'
 
-const SkillsData = [
-	{
-		icon: <AimOutlined />,
-		description: 'E-Sport',
-	},
-	{
-		icon: <CarOutlined />,
-		description: 'Globetrotting',
-	},
-	{
-		icon: <FireOutlined />,
-		description: 'Kickboxing',
-	},
-	{
-		icon: <FundProjectionScreenOutlined />,
-		description: 'Analitics',
-	},
-]
-
-export const Hobby: React.FC = (): JSX.Element => (
-	<div className='container'>
-		<SectionTitle title='Interests' />
-		<List
-			itemLayout='horizontal'
-			dataSource={SkillsData}
-			renderItem={(item) => (
-				<List.Item>
-					<List.Item.Meta
-						avatar={item.icon || <PlayCircleFilled style={{ color: 'blue' }} />}
-						description={item.description}
-					/>
-				</List.Item>
-			)}
-		/>
-	</div>
-)
+export const Hobby: React.FC = (): JSX.Element => {
+  const hobbyInformations = useAppSelector<HobbyType[]>(
+    ({ hobby }) => hobby.hobby
+  )
+  return (
+    <div className='container'>
+      <SectionTitle title='Hobby' />
+      <List
+        itemLayout='horizontal'
+        dataSource={hobbyInformations}
+        renderItem={({ icon, title }) => (
+          <List.Item>
+            <List.Item.Meta
+              avatar={icons.find(({name}) => name === icon)?.component || <PlayCircleFilled style={{ color: 'blue' }} />}
+              title={title}
+            />
+          </List.Item>
+        )}
+      />
+    </div>
+  )
+}

@@ -1,12 +1,8 @@
 import { Input } from 'antd'
 import { ChangeEvent, FC, useCallback, useState } from 'react'
-import { LanguageType } from '../../Reducers/Languages/types'
-import { useAppDispatch } from '../hooks'
-
-interface Props {
-  item: LanguageType
-  index: number
-}
+import { LanguageType } from '../../../Reducers/Languages/types'
+import { useAppDispatch } from '../../hooks'
+import { Props } from './types'
 
 export const SingleLanguage: FC<Props> = ({ item, index }) => {
   const [language, setLanguage] = useState<LanguageType>(item)
