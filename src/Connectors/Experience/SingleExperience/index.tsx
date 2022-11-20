@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { Checkbox, Divider, Input } from 'antd'
 import { CheckboxChangeEvent } from 'antd/es/checkbox'
 import { ChangeEvent, FC, FormEvent, useCallback, useState } from 'react'
@@ -98,6 +99,7 @@ export const SingleExperience: FC<Props> = ({ item, index }) => {
       <Checkbox checked={experience.isPresent} onChange={onChange}>
         Is Current?
       </Checkbox>
+      <br />
       <label>Location: </label>
       <Input
         value={experience.location}
@@ -111,30 +113,15 @@ export const SingleExperience: FC<Props> = ({ item, index }) => {
         onInput={onDataChange}
         suppressContentEditableWarning={true}
       >
-        {experience.data.length > 1 ? (
-          <ul>
-            {experience.data.map((item: string, index: number) => (
-              <li key={`${item}${index}`}>{item}</li>
-            ))}
-          </ul>
-        ) : (
-          experience.data
-        )}
+        <ul>
+        {experience?.data.length > 1
+          ? experience.data.map((item: string, index: number) => (
+              <li key={`${item}${index}`} style={{display: 'block', marginBottom: '2px'}}>{item}</li>
+            )) // need to repair content editable
+          : experience.data} 
+        </ul>
       </div>
       <Divider />
     </div>
   )
 }
-
-/*
-
-const makeEditable = (elem) => {
-    elem.setAttribute('contenteditable', 'true');
-    elem.classList.add('ant-input')
-    elem.addEventListener('blur', (evt) => {
-        elem.removeAttribute('contenteditable');
-        elem.removeEventListener('blur', evt.target);
-        elem.classList.remove('ant-input')
-    });
-    elem.focus();
-}*/
