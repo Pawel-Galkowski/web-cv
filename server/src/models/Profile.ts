@@ -1,10 +1,13 @@
 import { Schema, model } from 'mongoose'
-import Contact from './Contact'
-import Education from './Education'
-import Experience from './Experience'
-import Languages from './Languages'
+
+// Configuration of user profile and data
 
 const ProfileSchema = new Schema({
+  id: Schema.Types.ObjectId,
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: 'users',
+  },
   name: {
     type: String,
     required: true,
@@ -17,13 +20,31 @@ const ProfileSchema = new Schema({
     type: String,
     required: true,
   },
-  contact: Contact,
-  experience: Experience,
-  education: Education,
-  languages: Languages,
-  interests: [{
-    type: String,
-  }]
+  contact: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Contact',
+    },
+  ],
+  experience: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Experience',
+    },
+  ],
+  education: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Education',
+    },
+  ],
+  languages: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Languages',
+    },
+  ],
+  interests: [String],
 })
 
 export default model('profile', ProfileSchema)

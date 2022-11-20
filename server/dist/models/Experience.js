@@ -31,5 +31,5 @@ const ExperienceSchema = new mongoose_1.Schema({
     location: String,
     description: String,
 });
-exports.default = (0, mongoose_1.model)('experience', ExperienceSchema);
+exports.default = (0, mongoose_1.model)('Experience', ExperienceSchema);
 //# sourceMappingURL=Experience.js.map

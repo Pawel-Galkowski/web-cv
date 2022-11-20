@@ -27,4 +27,4 @@ const EducationSchema = new Schema({
   location: String,
 })
 
-export default model('education', EducationSchema)
+export default model('Education', EducationSchema)

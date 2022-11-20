@@ -12,5 +12,5 @@ const ContactSchema = new mongoose_1.Schema({
     web: String,
     phone: String,
 });
-exports.default = (0, mongoose_1.model)('languages', ContactSchema);
+exports.default = (0, mongoose_1.model)('Languages', ContactSchema);
 //# sourceMappingURL=Contact.js.map

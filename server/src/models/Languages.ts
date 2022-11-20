@@ -11,4 +11,4 @@ const LanguagesSchema = new Schema({
   },
 })
 
-export default model('languages', LanguagesSchema)
+export default model('Languages', LanguagesSchema)

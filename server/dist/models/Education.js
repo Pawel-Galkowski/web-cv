@@ -27,5 +27,5 @@ const EducationSchema = new mongoose_1.Schema({
     to: String,
     location: String,
 });
-exports.default = (0, mongoose_1.model)('education', EducationSchema);
+exports.default = (0, mongoose_1.model)('Education', EducationSchema);
 //# sourceMappingURL=Education.js.map

@@ -31,4 +31,4 @@ const ExperienceSchema = new Schema({
   description: String,
 })
 
-export default model('experience', ExperienceSchema)
+export default model('Experience', ExperienceSchema)

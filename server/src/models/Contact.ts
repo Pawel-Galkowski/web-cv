@@ -12,4 +12,4 @@ const ContactSchema = new Schema({
   phone: String,
 })
 
-export default model('languages', ContactSchema)
+export default model('Languages', ContactSchema)

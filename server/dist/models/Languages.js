@@ -11,5 +11,5 @@ const LanguagesSchema = new mongoose_1.Schema({
         required: true,
     },
 });
-exports.default = (0, mongoose_1.model)('languages', LanguagesSchema);
+exports.default = (0, mongoose_1.model)('Languages', LanguagesSchema);
 //# sourceMappingURL=Languages.js.map
