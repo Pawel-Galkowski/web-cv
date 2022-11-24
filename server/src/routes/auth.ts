@@ -39,7 +39,7 @@ router.post(
   async (req: Request, res: Response) => {
     const errors = validationResult(req)
     if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() })
+      return res.status(400).json(errors.array())
     }
 
     const { email, password } = req.body
@@ -74,7 +74,6 @@ router.post(
           res.json({ token })
         }
       )
-      return 'Process succes'
     } catch (err) {
       return res.status(500).send(err.message)
     }
@@ -97,9 +96,11 @@ router.post(
   async (req: Request, res: Response) => {
     const errors = validationResult(req)
     if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() })
+      return res.status(400).json({...errors})
     }
-    const { name, email, password, role } = req.body
+
+    // return res.status(400).json({...req.body})
+    const { name, email, password } = req.body
 
     try {
       let user = await User.findOne({ email })

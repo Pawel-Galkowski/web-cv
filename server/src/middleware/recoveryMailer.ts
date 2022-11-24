@@ -1,9 +1,10 @@
 import nodemailer from 'nodemailer';
 import dotenv from 'dotenv';
+import { UserType } from '../types';
 
 dotenv.config();
 
-const recoveryMailer = async (user, secretKey) => {
+const recoveryMailer = async (user: UserType, secretKey: string) => {
   try {
     const transporter = nodemailer.createTransport({
       service: 'Gmail',
@@ -34,7 +35,7 @@ const recoveryMailer = async (user, secretKey) => {
                   https://joinjobs.com
               </p>
           </div>
-              </div>`,
+        </div>`,
     });
     return true;
   } catch (err) {
