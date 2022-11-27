@@ -1,6 +1,5 @@
 import { centerStyles, appStyles } from './styles'
 import { BlankCard, Navigation } from '../../Components'
-import 'antd/dist/antd.css'
 
 const MainPage: React.FC = () => (
   <main style={appStyles}>
@@ -12,5 +11,3 @@ const MainPage: React.FC = () => (
 )
 
 export default MainPage
-
-2
