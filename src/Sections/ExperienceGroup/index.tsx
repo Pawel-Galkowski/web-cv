@@ -2,6 +2,7 @@ import { Experience } from '../../Components'
 import { SectionTitle } from '../../Components/SectionTitle'
 import { useAppSelector } from '../../Connectors/hooks'
 import { ExperienceType } from '../../Reducers/Experience/types'
+import { v4 as uuidv4 } from 'uuid';
 
 export const ExperienceGroup: React.FC = () => {
   const experienceInformations = useAppSelector<ExperienceType[]>(
@@ -19,6 +20,7 @@ export const ExperienceGroup: React.FC = () => {
         location={exp.location}
         data={exp.data}
         isPresent={exp.isPresent}
+        key={uuidv4()}
       />)}
     </section>
   )

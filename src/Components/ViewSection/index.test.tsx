@@ -1,11 +1,10 @@
-import React from 'react'
 import { render } from '@testing-library/react'
 import { screen } from '@testing-library/dom'
-import BlankCard, { blankCardTestId } from '.'
+import ViewSection, { viewSectionTestId } from '.'
 import { store } from '../../store'
 import { Provider } from 'react-redux'
 
-describe('tests for blankCard component', () => {
+describe('tests for fullDocument component', () => {
   beforeAll(() => {
     Object.defineProperty(window, 'matchMedia', {
       writable: true,
@@ -13,20 +12,20 @@ describe('tests for blankCard component', () => {
         matches: false,
         media: query,
         onchange: null,
-        addListener: jest.fn(), // Deprecated
-        removeListener: jest.fn(), // Deprecated
+        addListener: jest.fn(),
+        removeListener: jest.fn(),
         addEventListener: jest.fn(),
         removeEventListener: jest.fn(),
         dispatchEvent: jest.fn(),
       })),
     })
   })
-  test('should render blank Card', () => {
+  test('should render full document', () => {
     render(
       <Provider store={store}>
-        <BlankCard />
+        <ViewSection />
       </Provider>
     )
-    expect(screen.getByTestId(blankCardTestId)).toBeInTheDocument()
+    expect(screen.getByTestId(viewSectionTestId)).toBeInTheDocument()
   })
 })

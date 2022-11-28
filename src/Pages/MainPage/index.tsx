@@ -1,10 +1,10 @@
 import { centerStyles, appStyles } from './styles'
-import { BlankCard, Navigation } from '../../Components'
+import { ViewSection, Navigation } from '../../Components'
 
 const MainPage: React.FC = () => (
   <main style={appStyles}>
     <div style={centerStyles}>
-      <BlankCard />
+      <ViewSection />
       <Navigation />
     </div>
   </main>

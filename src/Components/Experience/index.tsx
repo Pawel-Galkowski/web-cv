@@ -11,6 +11,11 @@ import {
 } from './styles'
 import { ExperiencedType } from './types'
 
+export const experienceTestId = 'education-testId'
+export const dateTestId = 'date-testId'
+export const workDataTestId = 'workData-testId'
+export const locationTestId = 'location-testId'
+
 const Experience: React.FC<ExperiencedType> = ({
   title,
   company,
@@ -21,19 +26,20 @@ const Experience: React.FC<ExperiencedType> = ({
   location,
   description,
 }) => (
-  <article style={experienceStyles}>
+  <article style={experienceStyles} data-testid={experienceTestId}>
     <StyledJobTitle level={3}>{title}</StyledJobTitle>
     <StyledCompanyTitle level={4}>{company}</StyledCompanyTitle>
     <small style={descritionStyles}>{description}</small>
     <div style={detailsStyles}>
-      <StyledParagraph>
+      <StyledParagraph data-testid={dateTestId}>
         {from} - {isPresent ? 'Present' : to}
       </StyledParagraph>
-      <StyledParagraph>{location}</StyledParagraph>
+      <StyledParagraph data-testid={locationTestId}>{location}</StyledParagraph>
     </div>
     <List
       itemLayout='horizontal'
       dataSource={data}
+      data-testid={workDataTestId}
       renderItem={(item: string) => (
         <StyledList>
           <List.Item.Meta

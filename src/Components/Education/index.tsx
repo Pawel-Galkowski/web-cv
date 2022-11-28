@@ -7,26 +7,30 @@ import {
 } from './styles'
 import { EducationType } from './types'
 
-const Experience: React.FC<EducationType> = ({
+export const educationTestId = 'education-testId'
+export const dateTestId = 'date-testId'
+export const locationTestId = 'location-testId'
+
+const Education: React.FC<EducationType> = ({
   title,
   project,
   school,
-  isPresent,
+  isPresent = false,
   from,
   to,
   location,
 }) => (
-  <article style={educationStyles}>
+  <article style={educationStyles} data-testid={educationTestId}>
     <StyledJobTitle level={3}>{title}</StyledJobTitle>
     <StyledCompanyTitle level={4}>{school}</StyledCompanyTitle>
     <div style={detailsStyles}>
-      <StyledParagraph>
+      <StyledParagraph data-testid={dateTestId}>
         {from} - {isPresent ? 'Present' : to}
       </StyledParagraph>
-      <StyledParagraph>{location}</StyledParagraph>
+      <StyledParagraph data-testid={locationTestId}>{location}</StyledParagraph>
     </div>
     {project}
   </article>
 )
 
-export default Experience
+export default Education

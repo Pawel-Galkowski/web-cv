@@ -9,7 +9,7 @@ import {
 } from '@ant-design/icons'
 import { ContactInfoStyles } from './styles'
 import { ContactItem } from '../../Components/ContactItem'
-import { LinkType } from '../../Components/ContactItem/types'
+import { LinkTypeEnum } from '../../Components/ContactItem/types'
 import { useAppSelector } from '../../Connectors/hooks'
 import { WebsiteTypes } from '../../Reducers/SocialMedia/types'
 
@@ -23,14 +23,14 @@ export const Contact: React.FC = (): JSX.Element => {
         <ContactItem
           icon={<MailFilled />}
           link={contactInformations.mail}
-          type={LinkType.MAIL}
+          type={LinkTypeEnum.MAIL}
         />
       )}
       {contactInformations.phone && (
         <ContactItem
           icon={<PhoneFilled />}
           link={contactInformations.phone.replaceAll(/\s/g,'')}
-          type={LinkType.PHONE}
+          type={LinkTypeEnum.PHONE}
           name={contactInformations.phone}
         />
       )}

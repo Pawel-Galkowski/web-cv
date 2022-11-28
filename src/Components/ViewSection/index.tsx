@@ -17,10 +17,10 @@ import {
   Skills,
 } from '../../Sections'
 
-export const blankCardTestId = 'blank-card-testId'
+export const viewSectionTestId = 'viewSection-testId'
 
-const BlankCard: React.FC = (): JSX.Element => (
-  <Row style={blankCardStyles} data-testid={blankCardTestId}>
+const ViewSection: React.FC = (): JSX.Element => (
+  <Row style={blankCardStyles} data-testid={viewSectionTestId}>
     <Col span={24} style={cardStyles}>
       <main style={mainContentStyles}>
         <About />
@@ -43,4 +43,4 @@ const BlankCard: React.FC = (): JSX.Element => (
   </Row>
 )
 
-export default BlankCard
+export default ViewSection

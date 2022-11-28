@@ -1,4 +1,4 @@
-export enum LinkType {
+export enum LinkTypeEnum {
 	MAIL = 'mailto:',
 	PHONE = 'tel:',
 }
@@ -6,6 +6,6 @@ export enum LinkType {
 export interface Props {
 	icon: JSX.Element
 	link?: string
-	type?: LinkType
+	type?: LinkTypeEnum
 	name?: string
 }
