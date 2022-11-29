@@ -1,4 +1,4 @@
-import { Collapse } from 'antd'
+import { Collapse, Typography  } from 'antd'
 import {
   About,
   Bio,
@@ -9,21 +9,25 @@ import {
   Education,
   Experience,
 } from '../../Connectors'
+import { navigationBaseStyles } from './styles'
 
 const { Panel } = Collapse
 
-const text = `
+export const defaultText = `
   A dog is a type of domesticated animal.
   Known for its loyalty and faithfulness,
   it can be found as a welcome guest in many households across the world.
 `
 
+export const navigationTestId = 'navigation-testId'
+export const collapseComponentTestId = 'collapseComponent-testId'
+
 const Navigation: React.FC = () => (
-  <nav style={{ maxWidth: '350px', minWidth: '300px' }}>
-    CV Informations
+  <nav style={navigationBaseStyles} data-testid={navigationTestId}>
+    <Typography.Title level={2}>CV Informations</Typography.Title>
     <Collapse defaultActiveKey={['2']}>
       <Panel header='Photo' key='1' collapsible='disabled'>
-        <p>{text}</p>
+        <p>{defaultText}</p>
       </Panel>
       <Panel header='Personal data' key='2'>
         <About />
@@ -35,7 +39,7 @@ const Navigation: React.FC = () => (
         <SocialMedia />
       </Panel>
       <Panel header='Experience' key='5'>
-      <Experience />
+        <Experience />
       </Panel>
       <Panel header='Education' key='6'>
         <Education />
@@ -47,16 +51,16 @@ const Navigation: React.FC = () => (
         <Skills />
       </Panel>
       <Panel header='Additional' key='9' collapsible='disabled'>
-        <p>{text}</p>
+        <p>{defaultText}</p>
       </Panel>
       <Panel header='Hobby' key='10'>
         <Hobby />
       </Panel>
       <Panel header='Certification' key='11' collapsible='disabled'>
-        <p>{text}</p>
+        <p>{defaultText}</p>
       </Panel>
       <Panel header='Rodo' key='12' collapsible='disabled'>
-        <p>{text}</p>
+        <p>{defaultText}</p>
       </Panel>
     </Collapse>
   </nav>
