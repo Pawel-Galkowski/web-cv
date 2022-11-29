@@ -1,4 +1,3 @@
-import { UserOutlined } from '@ant-design/icons'
 import { Avatar, Typography } from 'antd'
 import {
   aboutLayoutStyles,
@@ -9,17 +8,17 @@ import {
   typographyStyles,
 } from './styles'
 import { useAppSelector } from '../../Connectors/hooks'
+import { findIconComponent } from '../../Icons'
 
 const { Title, Paragraph } = Typography
 
 export const About: React.FC = (): JSX.Element => {
-  const profileInformations = useAppSelector(({ profile }) => {
-    return {
-      name: profile.name,
-      title: profile.title,
-      bio: profile.bio
-    }
-  })
+  const profileInformations = useAppSelector(({ profile }) => ({
+    name: profile.name,
+    title: profile.title,
+    bio: profile.bio,
+  }))
+
   return (
     <section style={aboutLayoutStyles}>
       <article style={bioStyles}>
@@ -38,7 +37,7 @@ export const About: React.FC = (): JSX.Element => {
         size={150}
         src='/avatar.jpg'
         alt='avatar'
-        icon={<UserOutlined />}
+        icon={findIconComponent('UserOutlined')}
       />
     </section>
   )

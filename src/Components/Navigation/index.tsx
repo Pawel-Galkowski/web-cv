@@ -1,4 +1,4 @@
-import { Collapse, Typography  } from 'antd'
+import { Collapse, Typography } from 'antd'
 import {
   About,
   Bio,

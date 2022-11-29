@@ -4,27 +4,41 @@ import {
   FundProjectionScreenOutlined,
   FireOutlined,
   PlayCircleFilled,
+  UserOutlined,
 } from '@ant-design/icons'
 
-export const icons = [
+const icons = [
   {
     name: 'AimOutlined',
-    component: <AimOutlined />,
+    testId: 'AimOutlined-testid',
+    component: <AimOutlined data-testid='AimOutlined-testid' />,
   },
   {
     name: 'CarOutlined',
-    component: <CarOutlined />,
+    testId: 'CarOutlined-testid',
+    component: <CarOutlined data-testid='CarOutlined-testid'/>,
   },
   {
     name: 'FundProjectionScreenOutlined',
-    component: <FundProjectionScreenOutlined />,
+    testId: 'FundProjectionScreenOutlined-testid',
+    component: <FundProjectionScreenOutlined data-testid='FundProjectionScreenOutlined-testid'/>,
   },
   {
     name: 'FireOutlined',
-    component: <FireOutlined />,
+    testId: 'FireOutlined-testid',
+    component: <FireOutlined data-testid='FireOutlined-testid'/>,
   },
   {
     name: 'PlayCircleFilled',
-    component: <PlayCircleFilled style={{ color: 'blue' }} />
-  }
+    testId: 'PlayCircleFilled-testid',
+    component: <PlayCircleFilled style={{ color: 'blue' }} data-testid='PlayCircleFilled-testid'/>,
+  },
+  {
+    name: 'UserOutlined',
+    testId: 'UserOutlined-testid',
+    component: <UserOutlined data-testid='UserOutlined-testid'/>,
+  },
 ]
+
+export const findIconComponent = (icon: string): JSX.Element | undefined => icons.find(({name}) => icon === name)?.component
+export const findIconTestId = (icon: string): string | undefined => icons.find(({name}) => icon === name)?.testId

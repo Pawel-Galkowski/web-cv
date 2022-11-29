@@ -1,8 +1,7 @@
-import { PlayCircleFilled } from '@ant-design/icons'
 import { List } from 'antd'
 import { SectionTitle } from '../../Components/SectionTitle'
 import { useAppSelector } from '../../Connectors/hooks'
-import { icons } from '../../Icons'
+import { findIconComponent } from '../../Icons'
 import { HobbyType } from '../../Reducers/Hobby/types'
 
 export const Hobby: React.FC = (): JSX.Element => {
@@ -18,7 +17,7 @@ export const Hobby: React.FC = (): JSX.Element => {
         renderItem={({ icon, title }) => (
           <List.Item>
             <List.Item.Meta
-              avatar={icons.find(({name}) => name === icon)?.component || <PlayCircleFilled style={{ color: 'blue' }} />}
+              avatar={findIconComponent(icon) || findIconComponent('PlayCircleFilled')}
               title={title}
             />
           </List.Item>

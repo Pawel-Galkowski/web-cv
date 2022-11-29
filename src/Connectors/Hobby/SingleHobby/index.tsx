@@ -3,8 +3,10 @@ import { ChangeEvent, FC, useCallback, useState } from 'react'
 import { useAppDispatch } from '../../hooks'
 import { Props } from './types'
 import { HobbyType } from '../../../Reducers/Hobby/types'
-import { icons } from '../../../Icons'
-import { PlayCircleFilled } from '@ant-design/icons'
+import { findIconComponent } from '../../../Icons'
+import { mainSingleHobbyStyles } from './styles'
+
+export const singleHobbyTestId = 'singleHobby-testId'
 
 export const SingleHobby: FC<Props> = ({ item, index }) => {
   const [hobby, setHobby] = useState<HobbyType>(item)
@@ -30,8 +32,8 @@ export const SingleHobby: FC<Props> = ({ item, index }) => {
   )
 
   return (
-    <div style={{ margin: '0 0 10px 0' }}>
-      {icons.find(({name}) => name === item.icon)?.component || <PlayCircleFilled style={{ color: 'blue' }} />}
+    <div style={mainSingleHobbyStyles} data-testid={singleHobbyTestId}>
+      {findIconComponent(item.icon) || findIconComponent('PlayCircleFilled')}
       <Input value={hobby.title} name='Title' onChange={onValueChange} />
     </div>
   )
