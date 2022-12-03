@@ -1,4 +1,5 @@
-import { Collapse, Typography } from 'antd'
+import { DownloadOutlined } from '@ant-design/icons'
+import { Button, Collapse, Typography } from 'antd'
 import {
   About,
   Bio,
@@ -10,6 +11,7 @@ import {
   Experience,
 } from '../../Connectors'
 import { navigationBaseStyles } from './styles'
+import { printDocument } from '../../Components/ViewSection'
 
 const { Panel } = Collapse
 
@@ -63,6 +65,9 @@ const Navigation: React.FC = () => (
         <p>{defaultText}</p>
       </Panel>
     </Collapse>
+    <Button type='primary' icon={<DownloadOutlined />} size='large' onClick={printDocument}>
+      Download
+    </Button>
   </nav>
 )
 

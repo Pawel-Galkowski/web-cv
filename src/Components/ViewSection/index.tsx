@@ -1,4 +1,5 @@
 import { Col, Row } from 'antd'
+import React from 'react'
 import {
   cardStyles,
   blankCardStyles,
@@ -16,13 +17,17 @@ import {
   Languages,
   Skills,
 } from '../../Sections'
+import { jsPDF } from 'jspdf'
+import html2canvas from 'html2canvas'
 
 export const viewSectionTestId = 'viewSection-testId'
+export const printSectionTestId = 'printSection-testId'
+export const printSectionId = 'printSection'
 
-const ViewSection: React.FC = (): JSX.Element => (
+const mainValue = (
   <Row style={blankCardStyles} data-testid={viewSectionTestId}>
     <Col span={24} style={cardStyles}>
-      <main style={mainContentStyles}>
+      <main style={mainContentStyles} id={printSectionId} data-testid={printSectionTestId}>
         <About />
         <Contact />
         <section style={firstSectionStyles}>
@@ -42,5 +47,19 @@ const ViewSection: React.FC = (): JSX.Element => (
     </Col>
   </Row>
 )
+
+const ViewSection: React.FC = (): JSX.Element => mainValue
+
+export const printDocument = () => {
+  const element: HTMLElement | null  = document.getElementById(printSectionId)
+  element ? html2canvas(element).then(
+    (canvas) => {
+      const pdf = new jsPDF('p', 'mm', 'a4')
+      pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 211, 298)
+      pdf.save('download.pdf')
+    }
+  // eslint-disable-next-line no-console
+  ) : console.error('cannot create pdf')
+}
 
 export default ViewSection

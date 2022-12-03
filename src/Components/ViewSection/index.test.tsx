@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 import { screen } from '@testing-library/dom'
-import ViewSection, { viewSectionTestId } from '.'
+import ViewSection, { viewSectionTestId, printSectionTestId } from '.'
 import { store } from '../../store'
 import { Provider } from 'react-redux'
 
@@ -27,5 +27,6 @@ describe('tests for fullDocument component', () => {
       </Provider>
     )
     expect(screen.getByTestId(viewSectionTestId)).toBeInTheDocument()
+    expect(screen.getByTestId(printSectionTestId)).toBeInTheDocument()
   })
 })
