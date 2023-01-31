@@ -5,7 +5,6 @@ import { Props } from './types'
 
 export const SingleSkill: FC<Props> = ({ title, index }) => {
   const [skill, setSkill] = useState<string>(title)
-
   const dispatch = useAppDispatch()
 
   const onValueChange = useCallback(
@@ -23,7 +22,7 @@ export const SingleSkill: FC<Props> = ({ title, index }) => {
   )
 
   return (
-    <div style={{ margin: '0 0 5px 0' }}>
+    <div style={{ marginBottom: '5px' }}>
       <Input value={skill} onChange={onValueChange} />
     </div>
   )

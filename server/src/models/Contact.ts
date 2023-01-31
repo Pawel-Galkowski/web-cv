@@ -1,7 +1,10 @@
 import { Schema, model } from 'mongoose'
 
 const ContactSchema = new Schema({
-  mail: String,
+  mail: {
+    type: String,
+    required: true,
+  },
   address: String,
   linkedin: String,
   telegram: String,

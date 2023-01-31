@@ -13,11 +13,13 @@ import { findIconComponent } from '../../Icons'
 const { Title, Paragraph } = Typography
 
 export const About: React.FC = (): JSX.Element => {
-  const profileInformations = useAppSelector(({ profile }) => ({
-    name: profile.name,
-    title: profile.title,
-    bio: profile.bio,
-  }))
+  const profileInformations = useAppSelector(
+    ({ profile: { name, title, bio } }) => ({
+      name,
+      title,
+      bio,
+    })
+  )
 
   return (
     <section style={aboutLayoutStyles}>
@@ -34,7 +36,6 @@ export const About: React.FC = (): JSX.Element => {
       </article>
       <Avatar
         style={avatarStyles}
-        size={150}
         src='/avatar.jpg'
         alt='avatar'
         icon={findIconComponent('UserOutlined')}

@@ -8,7 +8,8 @@ export const appStyles: CSSProperties = {
   flexDirection: 'row',
   justifyContent: 'space-around',
   alignItems: 'center',
-  color: Colors.black
+  color: Colors.black,
+  minWidth: '1100px'
 }
 
 export const centerStyles: CSSProperties = {

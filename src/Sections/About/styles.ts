@@ -16,6 +16,10 @@ export const bioStyles: CSSProperties = {
 }
 
 export const avatarStyles: CSSProperties = {
+  height: '150px',
+  width: '150px',
+  minHeight: '150px',
+  minWidth: '150px',
   border: `8px solid ${Colors.orange}`,
 }
 

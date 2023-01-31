@@ -30,6 +30,7 @@ const Bio: FC = () => {
         name='Bio'
         value={bio}
         onChange={onValueChange}
+        maxLength={360}
       />
     </div>
   )

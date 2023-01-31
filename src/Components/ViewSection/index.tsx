@@ -1,5 +1,4 @@
 import { Col, Row } from 'antd'
-import React from 'react'
 import {
   cardStyles,
   blankCardStyles,
@@ -22,9 +21,9 @@ import html2canvas from 'html2canvas'
 
 export const viewSectionTestId = 'viewSection-testId'
 export const printSectionTestId = 'printSection-testId'
-export const printSectionId = 'printSection'
+const printSectionId = 'printSection'
 
-const mainValue = (
+const mainValue: JSX.Element = (
   <Row style={blankCardStyles} data-testid={viewSectionTestId}>
     <Col span={24} style={cardStyles}>
       <main style={mainContentStyles} id={printSectionId} data-testid={printSectionTestId}>

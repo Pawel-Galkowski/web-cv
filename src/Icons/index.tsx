@@ -5,6 +5,7 @@ import {
   FireOutlined,
   PlayCircleFilled,
   UserOutlined,
+  PlusOutlined,
 } from '@ant-design/icons'
 
 const icons = [
@@ -12,6 +13,11 @@ const icons = [
     name: 'AimOutlined',
     testId: 'AimOutlined-testid',
     component: <AimOutlined data-testid='AimOutlined-testid' />,
+  },
+  {
+    name: 'PlusOutlined',
+    testId: 'PlusOutlined-testid',
+    component: <PlusOutlined data-testid='PlusOutlined-testid' />,
   },
   {
     name: 'CarOutlined',

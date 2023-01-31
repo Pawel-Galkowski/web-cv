@@ -2,8 +2,8 @@ import Express, { Request, Response } from 'express'
 import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 import config from 'config'
-import { check, validationResult } from 'express-validator'
-import { UserType } from '../types'
+import { body, validationResult } from 'express-validator'
+// import { UserType } from '../types'
 
 import { Auth, Mailer, RecoveryMailer } from '../middleware'
 import { User } from '../models'
@@ -32,10 +32,8 @@ router.get('/', Auth, async (req: Request, res: Response) => {
 
 router.post(
   '/',
-  [
-    check('email', 'Please include a valid email').isEmail(),
-    check('password', 'Password is required').exists(),
-  ],
+  body('email', 'Please include a valid email').isEmail(),
+  body('password', 'Password is required').exists(),
   async (req: Request, res: Response) => {
     const errors = validationResult(req)
     if (!errors.isEmpty()) {
@@ -59,9 +57,7 @@ router.post(
         return res.status(400).json({ msg: 'Verify your account first' })
       }
 
-      const payload = {
-        id: user.id,
-      }
+      const payload = { id: user.id }
 
       jwt.sign(
         payload,
@@ -86,20 +82,15 @@ router.post(
 
 router.post(
   '/register',
-  [
-    check('name', 'Name is required')
-      .not()
-      .isEmpty(),
-    check('email', 'Please include a valid email').isEmail(),
-    check('password', 'Please enter a stronger password').isLength({ min: 6 }),
-  ],
+  body('name').not().isEmpty(),
+  body('email').isEmail(),
+  body('password').isLength({ min: 6 }),
   async (req: Request, res: Response) => {
-    const errors = validationResult(req)
+    const errors = validationResult(req);
     if (!errors.isEmpty()) {
-      return res.status(400).json({...errors})
+      return res.status(400).json({ errors: errors.array() });
     }
 
-    // return res.status(400).json({...req.body})
     const { name, email, password } = req.body
 
     try {

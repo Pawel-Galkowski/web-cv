@@ -1,5 +1,5 @@
-import { JwtPayload, verify } from 'jsonwebtoken'
-import { get } from 'config'
+import jwt from 'jsonwebtoken'
+import config from 'config'
 import { Request, Response, NextFunction } from 'express'
 
 export default (req: Request, res: Response, next: NextFunction) => {
@@ -9,7 +9,7 @@ export default (req: Request, res: Response, next: NextFunction) => {
   }
 
   try {
-    const decoded = verify(token, get('jwtSecret')) as JwtPayload
+    const decoded = jwt.verify(token, config.get('jwtSecret')) as jwt.JwtPayload
 
     req.body.user = decoded.user
     return next()
